@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Moi</string>
+    <string name="login_background">கைபேசி எண்</string>
+    <string name="mobile_number">கைபேசி எண்</string>
+</resources>
