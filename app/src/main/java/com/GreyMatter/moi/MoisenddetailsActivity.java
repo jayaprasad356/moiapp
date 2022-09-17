@@ -9,10 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.GreyMatter.moi.Adapter.AttendingfunctionAdapter;
-import com.GreyMatter.moi.Adapter.MoisendAdapter;
-import com.GreyMatter.moi.model.Attendingfunction;
-import com.GreyMatter.moi.model.Moisend;
+import com.GreyMatter.moi.Adapter.MoisenddetailsAdapter;
+import com.GreyMatter.moi.model.Moisendeddetails;
 
 import java.util.ArrayList;
 
@@ -20,7 +18,7 @@ public class MoisenddetailsActivity extends AppCompatActivity {
     ImageView backbtn;
     Activity activity;
     RecyclerView recyclerview;
-    MoisendAdapter moisendAdapter;
+    MoisenddetailsAdapter moisenddetailsAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,17 +45,17 @@ public class MoisenddetailsActivity extends AppCompatActivity {
     }
 
     private void MoiSend() {
-        ArrayList<Moisend> moisends = new ArrayList<>();
-        Moisend moisend1 = new Moisend("1","","நயனஂ - விக்னேஷ் திருமண விழா","இடம் - சென்னை","தேதி - 01-11-2022");
-        Moisend moisend2 = new Moisend("1","","நயனஂ - விக்னேஷ் திருமண விழா","இடம் - சென்னை","தேதி - 01-11-2022");
-        Moisend moisend3 = new Moisend("1","","நயனஂ - விக்னேஷ் திருமண விழா","இடம் - சென்னை","தேதி - 01-11-2022");
+        ArrayList<Moisendeddetails> moisendeddetails = new ArrayList<>();
+        Moisendeddetails moisendeddetails1 = new Moisendeddetails("1","","நயனஂ - விக்னேஷ் திருமண விழா","இடம் - சென்னை","தேதி - 01-11-2022");
+        Moisendeddetails moisendeddetails2 = new Moisendeddetails("1","","நயனஂ - விக்னேஷ் திருமண விழா","இடம் - சென்னை","தேதி - 01-11-2022");
+        Moisendeddetails moisendeddetails3 = new Moisendeddetails("1","","நயனஂ - விக்னேஷ் திருமண விழா","இடம் - சென்னை","தேதி - 01-11-2022");
 
-        moisends.add(moisend1);
-        moisends.add(moisend2);
-        moisends.add(moisend3);
+        moisendeddetails.add(moisendeddetails1);
+        moisendeddetails.add(moisendeddetails2);
+        moisendeddetails.add(moisendeddetails3);
 
 
-        moisendAdapter = new MoisendAdapter(activity, moisends);
-        recyclerview.setAdapter(moisendAdapter);
+        moisenddetailsAdapter = new MoisenddetailsAdapter(activity, moisendeddetails);
+        recyclerview.setAdapter(moisenddetailsAdapter);
     }
 }

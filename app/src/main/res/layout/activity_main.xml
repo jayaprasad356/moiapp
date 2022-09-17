@@ -151,6 +151,7 @@
 
 
             <TextView
+                android:id="@+id/tvMoiSent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="மொய் செயஂய "
@@ -175,6 +176,7 @@
 
 
             <TextView
+                android:id="@+id/tvMoirecive"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="மொய் பெற"

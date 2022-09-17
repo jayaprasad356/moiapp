@@ -9,6 +9,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import com.GreyMatter.moi.Adapter.AttendingfunctionAdapter;
 import com.GreyMatter.moi.model.Attendingfunction;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     Activity activity;
     RecyclerView recyclerview;
     AttendingfunctionAdapter attendingfunctionAdapter;
+    TextView tvMoiSent,tvMoirecive;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
 
         homecard1 = findViewById(R.id.homecard1);
         homecard2 = findViewById(R.id.homecard2);
+        tvMoiSent = findViewById(R.id.tvMoiSent);
+        tvMoirecive = findViewById(R.id.tvMoirecive);
         recyclerview = findViewById(R.id.recyclerview);
 
         homecard1.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +47,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,MoiRecivedfunctionActivity.class);
+                startActivity(intent);
+            }
+        });
+        tvMoiSent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,MoisentfunctionActivity.class);
+                startActivity(intent);
+            }
+        });
+        tvMoirecive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,MoirecivingfunctionActivity.class);
                 startActivity(intent);
             }
         });

@@ -1,18 +1,19 @@
 package com.GreyMatter.moi.model;
 
 public class Moireciveddetails {
-    String id,imgview,funname,funplace,fundate;
+    String id,s_no,name,mobile_no,place,amount;
 
     public Moireciveddetails() {
 
     }
 
-    public Moireciveddetails(String id, String imgview, String funname, String funplace, String fundate) {
+    public Moireciveddetails(String id, String s_no, String name, String mobile_no, String place, String amount) {
         this.id = id;
-        this.imgview = imgview;
-        this.funname = funname;
-        this.funplace = funplace;
-        this.fundate = fundate;
+        this.s_no = s_no;
+        this.name = name;
+        this.mobile_no = mobile_no;
+        this.place = place;
+        this.amount = amount;
     }
 
     public String getId() {
@@ -23,35 +24,43 @@ public class Moireciveddetails {
         this.id = id;
     }
 
-    public String getImgview() {
-        return imgview;
+    public String getS_no() {
+        return s_no;
     }
 
-    public void setImgview(String imgview) {
-        this.imgview = imgview;
+    public void setS_no(String s_no) {
+        this.s_no = s_no;
     }
 
-    public String getFunname() {
-        return funname;
+    public String getName() {
+        return name;
     }
 
-    public void setFunname(String funname) {
-        this.funname = funname;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getFunplace() {
-        return funplace;
+    public String getMobile_no() {
+        return mobile_no;
     }
 
-    public void setFunplace(String funplace) {
-        this.funplace = funplace;
+    public void setMobile_no(String mobile_no) {
+        this.mobile_no = mobile_no;
     }
 
-    public String getFundate() {
-        return fundate;
+    public String getPlace() {
+        return place;
     }
 
-    public void setFundate(String fundate) {
-        this.fundate = fundate;
+    public void setPlace(String place) {
+        this.place = place;
+    }
+
+    public String getAmount() {
+        return amount;
+    }
+
+    public void setAmount(String amount) {
+        this.amount = amount;
     }
 }

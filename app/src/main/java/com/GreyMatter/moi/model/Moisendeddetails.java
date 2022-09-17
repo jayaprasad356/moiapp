@@ -1,13 +1,13 @@
 package com.GreyMatter.moi.model;
 
-public class Moisend {
+public class Moisendeddetails {
     String id,imgview,funname,funplace,fundate;
 
-    public Moisend() {
+    public Moisendeddetails() {
 
     }
 
-    public Moisend(String id, String imgview, String funname, String funplace, String fundate) {
+    public Moisendeddetails(String id, String imgview, String funname, String funplace, String fundate) {
         this.id = id;
         this.imgview = imgview;
         this.funname = funname;

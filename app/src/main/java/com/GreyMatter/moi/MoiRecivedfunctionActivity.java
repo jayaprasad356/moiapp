@@ -5,14 +5,14 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.GreyMatter.moi.Adapter.MoirecivedAdapter;
-import com.GreyMatter.moi.Adapter.MoisendAdapter;
 import com.GreyMatter.moi.model.Moirecived;
-import com.GreyMatter.moi.model.Moisend;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
@@ -22,6 +22,7 @@ public class MoiRecivedfunctionActivity extends AppCompatActivity {
     RecyclerView recyclerview;
     MoirecivedAdapter moirecivedAdapter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +30,7 @@ public class MoiRecivedfunctionActivity extends AppCompatActivity {
         activity = MoiRecivedfunctionActivity.this;
 
         backbtn = findViewById(R.id.backbtn);
+
         recyclerview = findViewById(R.id.recyclerview);
 
 
@@ -38,6 +40,7 @@ public class MoiRecivedfunctionActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
+
 
 
 

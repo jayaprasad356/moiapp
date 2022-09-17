@@ -14,20 +14,20 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.GreyMatter.moi.R;
 import com.GreyMatter.moi.helper.Session;
 
-import com.GreyMatter.moi.model.Moisend;
+import com.GreyMatter.moi.model.Moisendeddetails;
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
 
-public class MoisendAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class MoisenddetailsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     final Activity activity;
-    final ArrayList<Moisend> moisends;
+    final ArrayList<Moisendeddetails> moisendeddetails;
     Session session;
 
-    public MoisendAdapter(Activity activity, ArrayList<Moisend> moisends) {
+    public MoisenddetailsAdapter(Activity activity, ArrayList<Moisendeddetails> moisendeddetails) {
         this.activity = activity;
-        this.moisends = moisends;
+        this.moisendeddetails = moisendeddetails;
     }
     @NonNull
     @Override
@@ -41,12 +41,12 @@ public class MoisendAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holderParent, int position) {
         session = new Session(activity);
         final ExploreItemHolder holder = (ExploreItemHolder) holderParent;
-        final Moisend moisend = moisends.get(position);
+        final Moisendeddetails moisendeddetails = this.moisendeddetails.get(position);
 
-        Glide.with(activity).load(moisend.getImgview()).placeholder(R.drawable.fun_pic).into(holder.imageView);
-        holder.tvFunName.setText(moisend.getFunname());
-        holder.tvFunPlace.setText(moisend.getFunplace());
-        holder.tvFunDate.setText(moisend.getFundate());
+        Glide.with(activity).load(moisendeddetails.getImgview()).placeholder(R.drawable.fun_pic).into(holder.imageView);
+        holder.tvFunName.setText(moisendeddetails.getFunname());
+        holder.tvFunPlace.setText(moisendeddetails.getFunplace());
+        holder.tvFunDate.setText(moisendeddetails.getFundate());
 
 
 
@@ -64,7 +64,7 @@ public class MoisendAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
     @Override
     public int getItemCount() {
-        return moisends.size();
+        return moisendeddetails.size();
     }
 
     static class ExploreItemHolder extends RecyclerView.ViewHolder {

@@ -11,28 +11,28 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.GreyMatter.moi.MoirResivedDetailsActivity;
+import com.GreyMatter.moi.MoisentamountActivity;
 import com.GreyMatter.moi.R;
 import com.GreyMatter.moi.helper.Session;
-import com.GreyMatter.moi.model.Moirecived;
+import com.GreyMatter.moi.model.Moisendingfunction;
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
 
-public class MoirecivedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class MoisendingfunctionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     final Activity activity;
-    final ArrayList<Moirecived> moireciveds;
+    final ArrayList<Moisendingfunction> moisendingfunctions;
     Session session;
 
-    public MoirecivedAdapter(Activity activity, ArrayList<Moirecived> moireciveds) {
+    public MoisendingfunctionAdapter(Activity activity, ArrayList<Moisendingfunction> moisendingfunctions) {
         this.activity = activity;
-        this.moireciveds = moireciveds;
+        this.moisendingfunctions = moisendingfunctions;
     }
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(activity).inflate(R.layout.moi_recived_list, parent, false);
+        View view = LayoutInflater.from(activity).inflate(R.layout.moi_sending_function, parent, false);
         return new ExploreItemHolder(view);
     }
 
@@ -41,19 +41,20 @@ public class MoirecivedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holderParent, int position) {
         session = new Session(activity);
         final ExploreItemHolder holder = (ExploreItemHolder) holderParent;
-        final Moirecived moirecived = moireciveds.get(position);
+        final Moisendingfunction moiupcomingfunctions = this.moisendingfunctions.get(position);
 
-        Glide.with(activity).load(moirecived.getImgview()).placeholder(R.drawable.fun_pic).into(holder.imageView);
-        holder.tvFunName.setText(moirecived.getFunname());
-        holder.tvFunPlace.setText(moirecived.getFunplace());
-        holder.tvFunDate.setText(moirecived.getFundate());
+        Glide.with(activity).load(moiupcomingfunctions.getImgview()).placeholder(R.drawable.fun_pic).into(holder.imageView);
+        holder.tvFunName.setText(moiupcomingfunctions.getFunname());
+        holder.tvFunPlace.setText(moiupcomingfunctions.getFunplace());
+        holder.tvFunDate.setText(moiupcomingfunctions.getFundate());
 
 
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(activity, MoirResivedDetailsActivity.class);
+                Intent intent = new Intent(activity, MoisentamountActivity.class);
+
                 activity.startActivity(intent);
             }
         });
@@ -62,7 +63,7 @@ public class MoirecivedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
 
     @Override
     public int getItemCount() {
-        return moireciveds.size();
+        return moisendingfunctions.size();
     }
 
     static class ExploreItemHolder extends RecyclerView.ViewHolder {
