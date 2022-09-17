@@ -15,6 +15,7 @@ import com.GreyMatter.moi.MoirResivedDetailsActivity;
 import com.GreyMatter.moi.R;
 import com.GreyMatter.moi.helper.Session;
 import com.GreyMatter.moi.model.Moirecived;
+import com.GreyMatter.moi.model.Moireciveddetails;
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
@@ -22,17 +23,17 @@ import java.util.ArrayList;
 
 public class MoireciveddetailsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     final Activity activity;
-    final ArrayList<Moirecived> moireciveds;
+    final ArrayList<Moireciveddetails> moireciveddetails;
     Session session;
 
-    public MoireciveddetailsAdapter(Activity activity, ArrayList<Moirecived> moireciveds) {
+    public MoireciveddetailsAdapter(Activity activity, ArrayList<Moireciveddetails> moireciveddetails) {
         this.activity = activity;
-        this.moireciveds = moireciveds;
+        this.moireciveddetails = moireciveddetails;
     }
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(activity).inflate(R.layout.moi_recived_list, parent, false);
+        View view = LayoutInflater.from(activity).inflate(R.layout.moi_recived_details, parent, false);
         return new ExploreItemHolder(view);
     }
 
@@ -41,12 +42,15 @@ public class MoireciveddetailsAdapter extends RecyclerView.Adapter<RecyclerView.
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holderParent, int position) {
         session = new Session(activity);
         final ExploreItemHolder holder = (ExploreItemHolder) holderParent;
-        final Moirecived moirecived = moireciveds.get(position);
+        final Moireciveddetails moireciveddetail = moireciveddetails.get(position);
 
-        Glide.with(activity).load(moirecived.getImgview()).placeholder(R.drawable.fun_pic).into(holder.imageView);
-        holder.tvFunName.setText(moirecived.getFunname());
-        holder.tvFunPlace.setText(moirecived.getFunplace());
-        holder.tvFunDate.setText(moirecived.getFundate());
+
+        holder.tvsno.setText(moireciveddetail.getS_no());
+        holder.tvname.setText(moireciveddetail.getName());
+        holder.tvmobile.setText(moireciveddetail.getMobile_no());
+        holder.tvplace.setText(moireciveddetail.getPlace());
+        holder.tvammount.setText(moireciveddetail.getAmount());
+
 
 
 
@@ -62,19 +66,20 @@ public class MoireciveddetailsAdapter extends RecyclerView.Adapter<RecyclerView.
 
     @Override
     public int getItemCount() {
-        return moireciveds.size();
+        return moireciveddetails.size();
     }
 
     static class ExploreItemHolder extends RecyclerView.ViewHolder {
 
-        final ImageView imageView;
-        final TextView tvFunName,tvFunPlace,tvFunDate;
+
+        final TextView tvsno,tvname,tvmobile,tvplace,tvammount;
         public ExploreItemHolder(@NonNull View itemView) {
             super(itemView);
-            imageView = itemView.findViewById(R.id.imageView);
-            tvFunName = itemView.findViewById(R.id.tvFunName);
-            tvFunPlace = itemView.findViewById(R.id.tvFunPlace);
-            tvFunDate = itemView.findViewById(R.id.tvFunDate);
+            tvsno = itemView.findViewById(R.id.tvsno);
+            tvname = itemView.findViewById(R.id.tvname);
+            tvmobile = itemView.findViewById(R.id.tvmobile);
+            tvplace = itemView.findViewById(R.id.tvplace);
+            tvammount = itemView.findViewById(R.id.tvammount);
 
 
 
