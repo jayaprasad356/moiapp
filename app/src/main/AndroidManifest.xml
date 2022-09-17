@@ -58,6 +58,12 @@
         android:theme="@style/Theme.Moi"
         tools:targetApi="31">
         <activity
+            android:name=".MoirResivedDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MoiRecivedfunctionActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddfunctionActivity"
             android:exported="false" />
         <activity

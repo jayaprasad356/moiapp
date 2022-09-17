@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MoisenddetailsActivity">
-
+    tools:context=".MoirResivedDetailsActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:gravity="center"
-                android:text="மொயஂ செலுதஂதிய விவரஙஂகளஂ"
+                android:text="விசேஷஙஂகளைதஂ தேரஂநஂதெடுதஂதலஂ"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
 
@@ -61,6 +60,74 @@
         </RelativeLayout>
 
 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFF1C3"
+            android:orientation="horizontal"
+            android:gravity="center"
+
+            >
+
+
+            <TextView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="wrap_content"
+                android:text="எண்"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:padding="@dimen/_5sdp"
+
+                />
+
+            <TextView
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="wrap_content"
+                android:text="பெயரஂ"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+
+                />
+
+            <TextView
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="wrap_content"
+                android:text="கைபஂபேசி எணஂ"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/black"
+                android:gravity="center"
+
+
+                />
+
+
+            <TextView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="wrap_content"
+                android:text="ஊரஂ"
+                android:padding="@dimen/_5sdp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                />
+
+
+            <TextView
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="wrap_content"
+                android:text="தொகை"
+                android:padding="@dimen/_5sdp"
+                android:gravity="center"
+                android:textColor="@color/black"
+
+                />
+
+
+
+        </LinearLayout>
+
+
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -70,8 +137,6 @@
 
 
     </LinearLayout>
-
-
 
 
 </RelativeLayout>

@@ -11,8 +11,14 @@
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_addfunction.xml" value="0.20416666666666666" />
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_login_screen.xml" value="0.2" />
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/moiapp/app/src/main/res/layout/activity_moi_recivedfunction.xml" value="0.1675213675213675" />
+        <entry key="..\:/moiapp/app/src/main/res/layout/activity_moir_resived_details.xml" value="0.22" />
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_moisenddetails.xml" value="0.30173775671406006" />
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_otp.xml" value="0.20416666666666666" />
+        <entry key="..\:/moiapp/app/src/main/res/layout/attending_function_list.xml" value="0.25" />
+        <entry key="..\:/moiapp/app/src/main/res/layout/moi_recived_details.xml" value="0.33116036505867014" />
+        <entry key="..\:/moiapp/app/src/main/res/layout/moi_recived_list.xml" value="0.20416666666666666" />
+        <entry key="..\:/moiapp/app/src/main/res/layout/moi_send_list.xml" value="0.24740932642487046" />
       </map>
     </option>
   </component>

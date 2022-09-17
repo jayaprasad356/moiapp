@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MoisenddetailsActivity">
-
+    tools:context=".MoiRecivedfunctionActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:gravity="center"
-                android:text="மொயஂ செலுதஂதிய விவரஙஂகளஂ"
+                android:text="விசேஷஙஂகளைதஂ தேரஂநஂதெடுதஂதலஂ"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
 
@@ -70,8 +69,5 @@
 
 
     </LinearLayout>
-
-
-
 
 </RelativeLayout>
