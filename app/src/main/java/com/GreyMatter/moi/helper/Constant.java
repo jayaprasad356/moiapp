@@ -1,7 +1,7 @@
 package com.GreyMatter.moi.helper;
 
 public class Constant {
-    public static final String MainBaseUrl = "https://autobot.greymatterworks.in/";
+    public static final String MainBaseUrl = "https://moiapp.greymatterworks.in/";
     //public static final String MainBaseUrl = "http://192.168.43.38/autobot/";
     public static final String BaseUrl = MainBaseUrl + "api/";
     public static final String LOGIN_URL = BaseUrl + "login.php";
@@ -134,4 +134,14 @@ public class Constant {
     public static final String STATUS = "status";
     public static final String FALSE = "false";
     public static final String TRUE = "true";
+
+    public static final String MOBILENUMBER = "mobile";
+
+    //I ADDED THIS
+    public static final String NEWUSER = "new user";
+    public static final String REGISTERUSER = BaseUrl+ "registeruser.php";
+    public static final String ADDFUNCTION = BaseUrl+ "add-function.php";
+    public static final String FUNCTIONAME = "function_name";
+    public static final String PLACE = "place";
+    public static final String DATE = "date";
 }

@@ -26,8 +26,6 @@ public class Session {
         }
     }
 
-
-
     public void setData(String id, String val) {
         editor.putString(id, val);
         editor.commit();

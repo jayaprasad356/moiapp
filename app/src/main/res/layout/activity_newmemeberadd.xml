@@ -60,6 +60,7 @@
 
 
             <EditText
+                android:id="@+id/etName"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/_10sdp"
@@ -91,12 +92,14 @@
 
 
             <EditText
+                android:id="@+id/etMobile"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_marginRight="@dimen/_10sdp"
                 android:background="@drawable/edbg"
                 android:gravity="center"
+                android:maxLength="10"
                 android:inputType="number"
                 android:letterSpacing="0.1"
                 android:padding="@dimen/_10sdp"
@@ -122,6 +125,7 @@
 
 
             <EditText
+                android:id="@+id/etTown"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/_10sdp"
@@ -141,16 +145,16 @@
     </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/primary"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="@dimen/_20sdp"
         android:layout_marginLeft="@dimen/_50sdp"
         android:layout_marginRight="@dimen/_50sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:backgroundTint="@color/primary"
         android:padding="@dimen/_14sdp"
         android:text="பதிவு செயஂ"
-        android:textColor="@color/black"
-        />
+        android:textColor="@color/black" />
 
 </RelativeLayout>

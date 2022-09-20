@@ -70,6 +70,7 @@
                     android:background="@drawable/edbg"
                     android:gravity="center"
                     android:inputType="number"
+                    android:maxLength="7"
                     android:letterSpacing="0.1"
                     android:padding="@dimen/_10sdp"
                     android:drawableStart="@drawable/ic_money"
