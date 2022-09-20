@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context=".LoginScreen">
+    tools:context=".LoginActivity">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,33 +17,27 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <ImageView
                     android:id="@+id/imageView"
                     android:layout_width="match_parent"
-                    android:layout_height="460sp"
+                    android:layout_height="400sp"
                     android:contentDescription="@string/login_background"
                     android:scaleType="centerCrop"
-                    android:scrollY="00dp"
-                    android:src="@drawable/login_assests"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" >
+                    android:scrollY="30dp"
+                    android:src="@drawable/login_assests">
                 </ImageView>
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
                     android:src="@drawable/login"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    android:layout_centerInParent="true"
+                    />
+            </RelativeLayout>
 
 
             <TextView
@@ -57,11 +51,7 @@
                 android:text="@string/mobile_number"
                 android:textColor="@color/font_color"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                android:textStyle="bold"/>
             <LinearLayout
                 android:id="@+id/linearLayout2"
                 android:layout_width="match_parent"
@@ -69,10 +59,7 @@
                 android:layout_marginHorizontal="30dp"
                 android:layout_marginTop="38dp"
                 android:background="@drawable/et_background"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView">
+                android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="90dp"
@@ -100,11 +87,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
-                    android:gravity="center"
+                    android:padding="10dp"
+                    android:hint="கைபேசி எண்"
                     android:inputType="number"
+                    android:textStyle="bold"
+                    android:textColorHint="#797979"
+                    android:maxLength="10"
                     android:letterSpacing="0.1"
                     android:textColor="@color/font_color"
-                    android:textSize="19sp" />
+                    android:textSize="17sp" />
             </LinearLayout>
             <Button
                 android:id="@+id/btnLogin"

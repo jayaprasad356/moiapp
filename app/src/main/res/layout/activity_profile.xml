@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="400sp"
+                    android:contentDescription="@string/login_background"
+                    android:scaleType="centerCrop"
+                    android:scrollY="30dp"
+                    android:src="@drawable/login_assests">
+
+                </ImageView>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/profile" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="பெயர்"
+                android:textColor="@color/font_color"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_gravity="start"
+                android:layout_marginHorizontal="40dp"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="40dp"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:background="@drawable/edbg"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/userprofile"
+                        android:layout_marginStart="10dp"
+                        android:layout_gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/etUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:autofillHints="username"
+                        android:background="@null"
+                        android:hint="பெயர்"
+                        android:inputType="textPersonName"
+                        android:padding="13dp"
+                        android:textColor="@color/font_color"
+                        android:textColorHint="#A8A8A8"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="ஊர்"
+                android:textColor="@color/font_color"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="40dp"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:background="@drawable/edbg"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/locationicon"
+                        android:layout_marginStart="10dp"
+                        android:layout_gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/etLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/font_color"
+                        android:textStyle="bold"
+                        android:padding="13dp"
+                        android:hint="இடம்"
+                        android:textColorHint="#A8A8A8"
+                        android:autofillHints="postalAddress"
+                        android:inputType="textPersonName"
+                        android:background="@null"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="சேமிக்க"
+                android:layout_marginVertical="40dp"
+                android:padding="15dp"
+                android:backgroundTint="@color/yellow"
+                android:layout_marginHorizontal="95dp"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>
