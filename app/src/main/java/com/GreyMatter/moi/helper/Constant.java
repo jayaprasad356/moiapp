@@ -2,28 +2,12 @@ package com.GreyMatter.moi.helper;
 
 public class Constant {
     public static final String MainBaseUrl = "https://moiapp.greymatterworks.in/";
-    //public static final String MainBaseUrl = "http://192.168.43.38/autobot/";
     public static final String BaseUrl = MainBaseUrl + "api/";
     public static final String LOGIN_URL = BaseUrl + "login.php";
     public static final String SIGN_UP = BaseUrl + "signup.php";
     public static final String CATEGORY_LIST = BaseUrl + "category-list.php";
     public static final String USER_DETAILS_URL = BaseUrl + "userdetails.php";
-    public static final String PRODUCT_LIST = BaseUrl + "productlist.php";
-    public static final String RENTAL_VEHICLES_LIST = BaseUrl + "rentalvehicleslist.php";
-    public static final String RENTAL_ORDERS_LIST = BaseUrl + "orderlist_rentalvehicles.php";
-    public static final String UPLOADLICENSE_URL = BaseUrl + "uploadLicense.php";
-    public static final String RENTALORDER_URL = BaseUrl + "rentalorder.php";
-    public static final String SERVICE_LIST = BaseUrl + "serviceslist.php";
-    public static final String SLIDES_LIST = BaseUrl + "slidelist.php";
-    public static final String ORDERS_LIST = BaseUrl + "orderlist.php";
-    public static final String NOTIFICATION_LIST = BaseUrl + "notification-list.php";
-    public static final String ORDERS = BaseUrl + "orders.php";
-    public static final String SERVICES = BaseUrl + "services.php";
-    public static final String RENTAL = BaseUrl + "rental.php";
-    public static final String SHOWROOM_SIGNUP= BaseUrl + "showroom_signup.php";
-    public static final String SHOWROOM_LOGIN = BaseUrl + "showroom_login.php";
-    public static final String PINCODELIST_URL = BaseUrl + "pincodelist.php";
-    public static final String USED_VEHICLESLIST_URL = BaseUrl + "usedvehicleslist.php";
+
 
 
     public static final String WebSiteUrl = ""; //Admin panel url
@@ -57,6 +41,7 @@ public class Constant {
     public static final String OWNER = "owner";
     public static final String FUEL = "fuel";
     public static final String LOCATION = "location";
+    public static final String PLACE = "place";
     public static final String INSURANCE = "insurance";
     public static final String CUSTOMISED_TYRE_SIZE = "customised_tyre_size";
     public static final String PRICE = "price";
@@ -142,6 +127,6 @@ public class Constant {
     public static final String REGISTERUSER = BaseUrl+ "registeruser.php";
     public static final String ADDFUNCTION = BaseUrl+ "add-function.php";
     public static final String FUNCTIONAME = "function_name";
-    public static final String PLACE = "place";
     public static final String DATE = "date";
+    public static final String FUNCTIONLIST = BaseUrl +"functions-list.php";
 }

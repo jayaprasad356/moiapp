@@ -39,13 +39,15 @@ public class MainActivity extends AppCompatActivity {
         homecard1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,MoisenddetailsActivity.class);
+                //changing this for testing
+                Intent intent = new Intent(MainActivity.this,AddfunctionActivity.class);
                 startActivity(intent);
             }
         });
         homecard2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //changing this for testing
                 Intent intent = new Intent(MainActivity.this,MoiRecivedfunctionActivity.class);
                 startActivity(intent);
             }
