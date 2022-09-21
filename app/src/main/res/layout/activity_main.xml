@@ -65,7 +65,7 @@
                             android:layout_height="wrap_content"
                             android:text="மொயஂ செயஂதது"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/_12sdp"
+                            android:textSize="@dimen/_10sdp"
                             />
 
                         <TextView
@@ -110,7 +110,7 @@
                             android:layout_height="wrap_content"
                             android:text="மொயஂ பெற்றது "
                             android:textColor="@color/white"
-                            android:textSize="@dimen/_12sdp" />
+                            android:textSize="@dimen/_10sdp" />
 
                         <TextView
                             android:paddingTop="@dimen/_10sdp"

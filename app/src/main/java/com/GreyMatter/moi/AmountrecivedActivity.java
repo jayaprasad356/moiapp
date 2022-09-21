@@ -21,6 +21,7 @@ public class AmountrecivedActivity extends AppCompatActivity {
         setContentView(R.layout.activity_amountrecived);
 
         newmemberbtn = findViewById(R.id.newmemberbtn);
+        btnSubmit = findViewById(R.id.btnSubmit);
         newmemberbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

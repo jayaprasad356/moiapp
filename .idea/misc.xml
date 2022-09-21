@@ -3,54 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/moiapp/app/src/main/res/drawable/card_home1.xml" value="0.1185" />
-        <entry key="..\:/moiapp/app/src/main/res/drawable/card_home2.xml" value="0.1185" />
-        <entry key="..\:/moiapp/app/src/main/res/drawable/custom_progress_dialog.xml" value="0.1" />
-        <entry key="..\:/moiapp/app/src/main/res/drawable/edbg.xml" value="0.1185" />
-        <entry key="..\:/moiapp/app/src/main/res/drawable/search_bg.xml" value="0.1185" />
-        <entry key="..\:/moiapp/app/src/main/res/layout/activity_addfunction.xml" value="0.20416666666666666" />
-        <entry key="..\:/moiapp/app/src/main/res/layout/activity_amountrecived.xml" value="0.17192982456140352" />
-        <entry key="..\:/moiapp/app/src/main/res/layout/activity_amountsent.xml" value="0.25" />
-        <entry key="..\:/moiapp/app/src/main/res/layout/activity_login_screen.xml" value="0.2" />
-        <entry key="..\:/moiapp/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/moiapp/app/src/main/res/layout/activity_moi_recivedfunction.xml" value="0.1675213675213675" />
-        <entry key="..\:/moiapp/app/src/main/res/layout/activity_moir_resived_details.xml" value="0.22" />
-        <entry key="..\:/moiapp/app/src/main/res/layout/activity_moirecivingfunction.xml" value="0.17192982456140352" />
-        <entry key="..\:/moiapp/app/src/main/res/layout/activity_moisenddetails.xml" value="0.30173775671406006" />
-        <entry key="..\:/moiapp/app/src/main/res/layout/activity_moisentamount.xml" value="0.17192982456140352" />
-        <entry key="..\:/moiapp/app/src/main/res/layout/activity_moisentfunction.xml" value="0.17192982456140352" />
-        <entry key="..\:/moiapp/app/src/main/res/layout/activity_newmemeberadd.xml" value="0.17192982456140352" />
-        <entry key="..\:/moiapp/app/src/main/res/layout/activity_otp.xml" value="0.20416666666666666" />
-        <entry key="..\:/moiapp/app/src/main/res/layout/attending_function_list.xml" value="0.25" />
-        <entry key="..\:/moiapp/app/src/main/res/layout/moi_recived_details.xml" value="0.33" />
-        <entry key="..\:/moiapp/app/src/main/res/layout/moi_recived_list.xml" value="0.20416666666666666" />
-        <entry key="..\:/moiapp/app/src/main/res/layout/moi_recivingfunction_list.xml" value="0.17192982456140352" />
-        <entry key="..\:/moiapp/app/src/main/res/layout/moi_send_list.xml" value="0.24740932642487046" />
-        <entry key="..\:/moiapp/app/src/main/res/layout/moi_sending_function.xml" value="0.17192982456140352" />
-        <entry key="..\:/moiapp/app/src/main/res/layout/moi_upcoming_function.xml" value="0.17192982456140352" />
-        <entry key="..\:/moiappup/app/src/main/res/drawable/card_home1.xml" value="0.2155" />
-        <entry key="..\:/moiappup/app/src/main/res/drawable/card_home2.xml" value="0.2155" />
-        <entry key="..\:/moiappup/app/src/main/res/drawable/ic_profile.xml" value="0.2185" />
-        <entry key="..\:/moiappup/app/src/main/res/layout/activity_addfunction.xml" value="0.30885416666666665" />
-        <entry key="..\:/moiappup/app/src/main/res/layout/activity_amountrecived.xml" value="0.30885416666666665" />
-        <entry key="..\:/moiappup/app/src/main/res/layout/activity_login_screen.xml" value="0.3046875" />
-        <entry key="..\:/moiappup/app/src/main/res/layout/activity_main.xml" value="0.2988679352838745" />
-        <entry key="..\:/moiappup/app/src/main/res/layout/activity_moi_recivedfunction.xml" value="0.30885416666666665" />
-        <entry key="..\:/moiappup/app/src/main/res/layout/activity_moir_resived_details.xml" value="0.30885416666666665" />
-        <entry key="..\:/moiappup/app/src/main/res/layout/activity_moirecivingfunction.xml" value="0.30885416666666665" />
-        <entry key="..\:/moiappup/app/src/main/res/layout/activity_moisenddetails.xml" value="0.30885416666666665" />
-        <entry key="..\:/moiappup/app/src/main/res/layout/activity_moisentamount.xml" value="0.30885416666666665" />
-        <entry key="..\:/moiappup/app/src/main/res/layout/activity_moisentfunction.xml" value="0.30885416666666665" />
-        <entry key="..\:/moiappup/app/src/main/res/layout/activity_newmemeberadd.xml" value="0.30885416666666665" />
-        <entry key="..\:/moiappup/app/src/main/res/layout/activity_otp.xml" value="0.22685185185185186" />
-        <entry key="..\:/moiappup/app/src/main/res/layout/activity_profile.xml" value="0.30885416666666665" />
-        <entry key="..\:/moiappup/app/src/main/res/layout/activity_splash.xml" value="0.3046875" />
-        <entry key="..\:/moiappup/app/src/main/res/layout/attending_function_list.xml" value="0.30885416666666665" />
-        <entry key="..\:/moiappup/app/src/main/res/layout/moi_recived_details.xml" value="0.30885416666666665" />
-        <entry key="..\:/moiappup/app/src/main/res/layout/moi_recived_list.xml" value="0.30885416666666665" />
-        <entry key="..\:/moiappup/app/src/main/res/layout/moi_recivingfunction_list.xml" value="0.30885416666666665" />
-        <entry key="..\:/moiappup/app/src/main/res/layout/moi_send_list.xml" value="0.30885416666666665" />
-        <entry key="..\:/moiappup/app/src/main/res/layout/moi_sending_function.xml" value="0.30885416666666665" />
+        <entry key="..\:/Studio Projects/Moi/app/src/main/res/layout/activity_amountrecived.xml" value="0.16666666666666666" />
+        <entry key="..\:/Studio Projects/Moi/app/src/main/res/layout/activity_main.xml" value="0.17552083333333332" />
       </map>
     </option>
   </component>
