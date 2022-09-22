@@ -33,7 +33,7 @@
 
                 <ImageView
                     android:scaleType="fitXY"
-                    android:id="@+id/imageView"
+                    android:id="@+id/imgFunction"
                     android:layout_width="@dimen/_80sdp"
                     android:layout_height="@dimen/_80sdp" />
 

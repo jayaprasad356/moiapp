@@ -1,45 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".AmountrecivedActivity">
-
-
-
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
     <RelativeLayout
+        android:id="@+id/head"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/primary"
-        android:padding="@dimen/_10sdp">
-
-
-        <ImageView
-            android:id="@+id/backbtn"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_30sdp"
-            android:background="@drawable/ic_baseline_arrow_circle_left_24" />
-
+        android:padding="@dimen/_15sdp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:gravity="center"
-            android:text="நயனஂ - விக்னேஷ் திருமண விழா"
+            android:text="புதிய நபரை சேரஂகஂக"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
 
     </RelativeLayout>
-
-
     <LinearLayout
+        android:id="@+id/l1"
+        android:layout_below="@+id/head"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_centerInParent="true"
         >
 
 
@@ -55,40 +43,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
-                android:text="செலுதஂதுபவரினஂ கைபஂபேசி எணஂ"
+                android:text="பெயரஂ"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_14sdp" />
 
 
             <EditText
-                android:id="@+id/etMobile"
+                android:id="@+id/etName"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_marginRight="@dimen/_10sdp"
                 android:background="@drawable/edbg"
-                android:gravity="center"
-                android:maxLength="10"
-                android:inputType="number"
-                android:letterSpacing="0.1"
                 android:padding="@dimen/_10sdp"
                 android:textColor="@color/font_color"
                 android:textSize="19sp" />
 
 
         </LinearLayout>
-
-        <Button
-            android:id="@+id/newmemberbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="புதிய நபரை சேரஂகஂக"
-            android:backgroundTint="@color/black"
-            android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginBottom="@dimen/_10sdp"
-            />
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -100,25 +72,50 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
-                android:text="மொயஂ தொகையை பதிவிடுக"
+                android:text="கைபேசி எண்"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_14sdp" />
 
 
             <EditText
-                android:id="@+id/etAmount"
+                android:id="@+id/etMobile"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_marginRight="@dimen/_10sdp"
                 android:background="@drawable/edbg"
-                android:gravity="center"
+                android:maxLength="10"
                 android:inputType="number"
-                android:maxLength="7"
-                android:letterSpacing="0.1"
                 android:padding="@dimen/_10sdp"
-                android:drawableStart="@drawable/ic_money"
-                android:drawableTint="#1B5E20"
+                android:textColor="@color/font_color"
+                android:textSize="19sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:text="ஊர்"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp" />
+
+
+            <EditText
+                android:id="@+id/etPlace"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/edbg"
+                android:padding="@dimen/_10sdp"
                 android:textColor="@color/font_color"
                 android:textSize="19sp" />
 
@@ -132,10 +129,8 @@
         android:id="@+id/btnSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="@dimen/_50sdp"
-        android:layout_marginRight="@dimen/_50sdp"
-        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_below="@+id/l1"
+        android:layout_margin="@dimen/_20sdp"
         android:backgroundTint="@color/primary"
         android:padding="@dimen/_14sdp"
         android:text="பதிவு செயஂ"

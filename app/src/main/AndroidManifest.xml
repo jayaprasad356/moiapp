@@ -70,7 +70,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MoirecivingfunctionActivity"
+            android:name=".FunctionListActivity"
             android:exported="false" />
         <activity
             android:name=".MoisentamountActivity"
@@ -79,7 +79,7 @@
             android:name=".MoisentfunctionActivity"
             android:exported="false" />
         <activity
-            android:name=".AmountrecivedActivity"
+            android:name=".MoiReceiveActivity"
             android:exported="false" />
         <activity
             android:name=".NewmemeberaddActivity"

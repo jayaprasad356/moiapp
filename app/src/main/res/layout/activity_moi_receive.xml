@@ -4,30 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddfunctionActivity">
+    tools:context=".MoiReceiveActivity">
+
+
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/primary"
         android:padding="@dimen/_10sdp">
-
-
-        <ImageView
-            android:id="@+id/backbtn"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_30sdp"
-            android:background="@drawable/ic_baseline_arrow_circle_left_24" />
-
-
-        <TextView
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:gravity="center"
-            android:text="விசேஷஙஂகளை பதிவு செயஂதலஂ"
-            android:textColor="@color/black"
-            android:textStyle="bold" />
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/backbtn"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@drawable/ic_baseline_arrow_circle_left_24" />
+
+
+
+            <TextView
+                android:id="@+id/tvFunName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+
 
 
     </RelativeLayout>
@@ -53,62 +63,40 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
-                android:text="விசேஷதஂதினஂ பெயரஂ"
+                android:text="செலுதஂதுபவரினஂ கைபஂபேசி எணஂ"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_14sdp" />
 
 
             <EditText
-                android:id="@+id/etEventName"
+                android:id="@+id/etMobile"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_marginRight="@dimen/_10sdp"
                 android:background="@drawable/edbg"
                 android:gravity="center"
-                android:hint="விசேஷதஂதினஂ பெயரஂ"
-                android:inputType="textPersonName"
+                android:maxLength="10"
+                android:inputType="number"
                 android:letterSpacing="0.1"
                 android:padding="@dimen/_10sdp"
                 android:textColor="@color/font_color"
-                android:textColorHint="#989898"
                 android:textSize="19sp" />
 
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/lyDate"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/newmemberbtn"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:text="புதிய நபரை சேரஂகஂக"
+            android:backgroundTint="@color/black"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            />
 
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_10sdp"
-                android:text="தேதி"
-                android:textColor="@color/black"
-                android:textSize="@dimen/_14sdp" />
-
-            <TextView
-                android:id="@+id/tvFunDate"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_marginRight="@dimen/_10sdp"
-                android:background="@drawable/edbg"
-                android:gravity="center"
-                android:hint="தேதி"
-                android:textColorHint="#989898"
-                android:letterSpacing="0.1"
-                android:padding="@dimen/_10sdp"
-                android:textColor="@color/font_color"
-                android:textSize="19sp" />
-
-
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -120,25 +108,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
-                android:text="இடம்"
+                android:text="மொயஂ தொகையை பதிவிடுக"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_14sdp" />
 
 
             <EditText
-                android:id="@+id/etPlace"
+                android:id="@+id/etAmount"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_marginRight="@dimen/_10sdp"
                 android:background="@drawable/edbg"
                 android:gravity="center"
-                android:hint="இடம்"
-                android:inputType="textPostalAddress"
+                android:inputType="number"
+                android:maxLength="7"
                 android:letterSpacing="0.1"
                 android:padding="@dimen/_10sdp"
+                android:drawableStart="@drawable/ic_money"
+                android:drawableTint="#1B5E20"
                 android:textColor="@color/font_color"
-                android:textColorHint="#989898"
                 android:textSize="19sp" />
 
 
