@@ -1,7 +1,9 @@
 package com.GreyMatter.moi;
 
+import static com.GreyMatter.moi.helper.Constant.SUCCESS;
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Activity;
@@ -10,24 +12,34 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.GreyMatter.moi.Adapter.AttendingfunctionAdapter;
-import com.GreyMatter.moi.model.Attendingfunction;
+import com.GreyMatter.moi.Adapter.FunctionAdapter;
+import com.GreyMatter.moi.helper.ApiConfig;
+import com.GreyMatter.moi.helper.Constant;
+import com.GreyMatter.moi.helper.Session;
+import com.GreyMatter.moi.model.Functions;
 import com.google.android.material.card.MaterialCardView;
+import com.google.gson.Gson;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
     MaterialCardView homecard1,homecard2;
     Activity activity;
     RecyclerView recyclerview;
-    AttendingfunctionAdapter attendingfunctionAdapter;
     TextView tvMoiSent,tvMoirecive;
+    Session session;
+    FunctionAdapter functionAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         activity = MainActivity.this;
+        session = new Session(activity);
 
         homecard1 = findViewById(R.id.homecard1);
         homecard2 = findViewById(R.id.homecard2);
@@ -39,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //changing this for testing
-                Intent intent = new Intent(MainActivity.this,AddfunctionActivity.class);
+                Intent intent = new Intent(MainActivity.this,MoisenddetailsActivity.class);
                 startActivity(intent);
             }
         });
@@ -47,47 +59,64 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //changing this for testing
-                Intent intent = new Intent(MainActivity.this,MoiRecivedfunctionActivity.class);
+                Intent intent = new Intent(MainActivity.this, FunctionListActivity.class);
+                intent.putExtra(Constant.MOI,"moidetails");
                 startActivity(intent);
             }
         });
         tvMoiSent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,MoisentfunctionActivity.class);
-                startActivity(intent);
             }
         });
         tvMoirecive.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, FunctionListActivity.class);
+                intent.putExtra(Constant.MOI,"addmoi");
                 startActivity(intent);
             }
         });
 
-        //recyclerview.setLayoutManager(new LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false));
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(activity,1);
-        recyclerview.setLayoutManager(gridLayoutManager);
+        recyclerview.setLayoutManager(new LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false));
 
-        functionlist();
+
+
+        functionList();
+
+    }
+    private void functionList() {
+
+        HashMap<String,String> params = new HashMap<>();
+        params.put(Constant.USER_ID,session.getData(Constant.ID));
+        ApiConfig.RequestToVolley((result, response) -> {
+            if(result) {
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
+                    if(jsonObject.getBoolean(SUCCESS)){
+                        JSONArray jsonArray = jsonObject.getJSONArray(Constant.RECENT_FUNCTIONS);
+                        Gson g = new Gson();
+                        ArrayList<Functions> functions = new ArrayList<>();
+
+                        for (int i = 0; i < jsonArray.length(); i++) {
+                            JSONObject jsonObject1 = jsonArray.getJSONObject(i);
+                            if (jsonObject1 != null) {
+                                Functions group = g.fromJson(jsonObject1.toString(), Functions.class);
+                                functions.add(group);
+                            } else {
+                                break;
+                            }
+                        }
+                        functionAdapter = new FunctionAdapter(activity, functions,"moidetails");
+                        recyclerview.setAdapter(functionAdapter);
+                    }
+                }catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        },activity, Constant.DASHBOARD,params,true);
 
     }
 
-    private void functionlist() {
 
-        ArrayList<Attendingfunction> attendingfunctions = new ArrayList<>();
-        Attendingfunction attendingfunction1 = new Attendingfunction("1","","நயனஂ - விக்னேஷ் திருமண விழா","இடம் - சென்னை","தேதி - 01-11-2022");
-        Attendingfunction attendingfunction2 = new Attendingfunction("1","","நயனஂ - விக்னேஷ் திருமண விழா","இடம் - சென்னை","தேதி - 01-11-2022");
-        Attendingfunction attendingfunction3 = new Attendingfunction("1","","நயனஂ - விக்னேஷ் திருமண விழா","இடம் - சென்னை","தேதி - 01-11-2022");
-
-        attendingfunctions.add(attendingfunction1);
-        attendingfunctions.add(attendingfunction2);
-        attendingfunctions.add(attendingfunction3);
-
-        attendingfunctionAdapter = new AttendingfunctionAdapter(activity, attendingfunctions);
-        recyclerview.setAdapter(attendingfunctionAdapter);
-
-
-    }
 }

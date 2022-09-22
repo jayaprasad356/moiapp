@@ -14,20 +14,14 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.GreyMatter.moi.Adapter.MoireciveddetailsAdapter;
-import com.GreyMatter.moi.Adapter.MoisenddetailsAdapter;
-import com.GreyMatter.moi.model.Moireciveddetails;
-import com.GreyMatter.moi.model.Moisendeddetails;
-
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Objects;
 
-public class MoirResivedDetailsActivity extends AppCompatActivity {
+public class MoirReceivedDetailsActivity extends AppCompatActivity {
     ImageView backbtn;
     Activity activity;
     RecyclerView recyclerview;
-    MoireciveddetailsAdapter moireciveddetailsAdapter;
     private ImageView imgMice;
     private EditText Search;
 
@@ -37,9 +31,9 @@ public class MoirResivedDetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_moir_resived_details);
+        setContentView(R.layout.activity_moi_received_details);
 
-        activity = MoirResivedDetailsActivity.this;
+        activity = MoirReceivedDetailsActivity.this;
 
         imgMice = findViewById(R.id.imgMike);
         backbtn = findViewById(R.id.backbtn);
@@ -63,7 +57,7 @@ public class MoirResivedDetailsActivity extends AppCompatActivity {
                 try {
                     startActivityForResult(speech,REQUEST_CODE_SPEECH_INPUT);
                 }catch (Exception e) {
-                    Toast.makeText(MoirResivedDetailsActivity.this, " " + e.getMessage(),
+                    Toast.makeText(MoirReceivedDetailsActivity.this, " " + e.getMessage(),
                                     Toast.LENGTH_SHORT)
                             .show();
                 }
@@ -76,23 +70,23 @@ public class MoirResivedDetailsActivity extends AppCompatActivity {
         recyclerview.setLayoutManager(gridLayoutManager);
 
 
-        Moiresciveddetails();
+       // Moiresciveddetails();
     }
-
-    private void Moiresciveddetails() {
-
-
-        ArrayList<Moireciveddetails> moireciveddetails = new ArrayList<>();
-        Moireciveddetails moireciveddetails1 = new Moireciveddetails("1","1","விக்னேஷ்","9876543210","சென்னை","₹ 200");
-
-        moireciveddetails.add(moireciveddetails1);
-
-
-
-        moireciveddetailsAdapter = new MoireciveddetailsAdapter(activity, moireciveddetails);
-        recyclerview.setAdapter(moireciveddetailsAdapter);
-
-    }
+//
+//    private void Moiresciveddetails() {
+//
+//
+//        ArrayList<Moireciveddetails> moireciveddetails = new ArrayList<>();
+//        Moireciveddetails moireciveddetails1 = new Moireciveddetails("1","1","விக்னேஷ்","9876543210","சென்னை","₹ 200");
+//
+//        moireciveddetails.add(moireciveddetails1);
+//
+//
+//
+//        moireciveddetailsAdapter = new MoireciveddetailsAdapter(activity, moireciveddetails);
+//        recyclerview.setAdapter(moireciveddetailsAdapter);
+//
+//    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode,

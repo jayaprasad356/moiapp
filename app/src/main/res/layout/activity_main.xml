@@ -159,6 +159,7 @@
                 android:textSize="@dimen/_14sdp"
                 android:textColor="@color/black"
                 android:padding="@dimen/_14sdp"
+                android:visibility="gone"
                 android:textStyle="bold"
                 android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
                 android:drawableTint="@color/black"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MoiRecivedfunctionActivity">
+    tools:context=".MoirReceivedDetailsActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -51,15 +51,15 @@
             >
 
             <EditText
-                android:id="@+id/etSearch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:hint="விசேஷஙஂகளைதஂ தேட" />
 
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:gravity="end"
                 android:orientation="horizontal">
 
@@ -67,10 +67,75 @@
                     android:id="@+id/imgMike"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="end"
                     android:src="@drawable/ic_baseline_mic_none_24"/>
-
             </LinearLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFF1C3"
+            android:orientation="horizontal"
+            android:gravity="center"
+
+            >
+
+
+            <TextView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="wrap_content"
+                android:text="எண்"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:padding="@dimen/_5sdp"
+
+                />
+
+            <TextView
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="wrap_content"
+                android:text="பெயரஂ"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+
+                />
+
+            <TextView
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="wrap_content"
+                android:text="கைபஂபேசி எணஂ"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/black"
+                android:gravity="center"
+
+
+                />
+
+
+            <TextView
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="wrap_content"
+                android:text="ஊரஂ"
+                android:padding="@dimen/_5sdp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                />
+
+
+            <TextView
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="wrap_content"
+                android:text="தொகை"
+                android:padding="@dimen/_5sdp"
+                android:gravity="center"
+                android:textColor="@color/black"
+
+                />
+
+
 
         </LinearLayout>
 
@@ -84,8 +149,6 @@
 
 
     </LinearLayout>
-
-
 
 
 </RelativeLayout>

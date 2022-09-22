@@ -70,31 +70,22 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".MoisenddetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".FunctionListActivity"
             android:exported="false" />
         <activity
             android:name=".MoisentamountActivity"
             android:exported="false" />
         <activity
-            android:name=".MoisentfunctionActivity"
-            android:exported="false" />
-        <activity
             android:name=".MoiReceiveActivity"
             android:exported="false" />
         <activity
-            android:name=".NewmemeberaddActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MoirResivedDetailsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MoiRecivedfunctionActivity"
+            android:name=".MoirReceivedDetailsActivity"
             android:exported="false" />
         <activity
             android:name=".AddfunctionActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MoisenddetailsActivity"
             android:exported="false" />
         <activity
             android:name=".Otp"

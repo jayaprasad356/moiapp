@@ -47,6 +47,7 @@ public class FunctionListActivity extends AppCompatActivity {
     Session session;
 
     private final int REQUEST_CODE_SPEECH_INPUT = 0;
+    String MOiIntent;
 
 
     @Override
@@ -56,6 +57,7 @@ public class FunctionListActivity extends AppCompatActivity {
 
         activity = FunctionListActivity.this;
         session = new Session(activity);
+        MOiIntent = getIntent().getStringExtra(Constant.MOI);
 
         backbtn = findViewById(R.id.backbtn);
         fabAddFunction = findViewById(R.id.fabAddFunction);
@@ -123,7 +125,7 @@ public class FunctionListActivity extends AppCompatActivity {
                                 break;
                             }
                         }
-                        functionAdapter = new FunctionAdapter(activity, functions);
+                        functionAdapter = new FunctionAdapter(activity, functions,MOiIntent);
                         recyclerview.setAdapter(functionAdapter);
                     }
                 }catch (Exception e) {

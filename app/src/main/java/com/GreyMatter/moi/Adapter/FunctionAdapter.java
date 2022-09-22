@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.GreyMatter.moi.MoiReceiveActivity;
+import com.GreyMatter.moi.MoirReceivedDetailsActivity;
 import com.GreyMatter.moi.R;
 import com.GreyMatter.moi.helper.Constant;
 import com.GreyMatter.moi.model.Functions;
@@ -23,10 +24,12 @@ import java.util.ArrayList;
 public class FunctionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     final Activity activity;
     final ArrayList<Functions> functions;
+    String MOiIntent;
 
-    public FunctionAdapter(Activity activity, ArrayList<Functions> functions) {
+    public FunctionAdapter(Activity activity, ArrayList<Functions> functions, String MOiIntent) {
         this.activity = activity;
         this.functions = functions;
+        this.MOiIntent = MOiIntent;
     }
     @NonNull
     @Override
@@ -45,16 +48,23 @@ public class FunctionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         holder.tvFunName.setText(functions1.getFunction_name());
         holder.tvFunPlace.setText("இடம் - "+functions1.getPlace());
         holder.tvFunDate.setText("தேதி - "+functions1.getDate());
-
-
-
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(activity, MoiReceiveActivity.class);
-                intent.putExtra(Constant.ID,functions1.getId());
-                intent.putExtra(Constant.FUNCTIONAME,functions1.getFunction_name());
-                activity.startActivity(intent);
+                if (MOiIntent.equals("addmoi")){
+                    Intent intent = new Intent(activity, MoiReceiveActivity.class);
+                    intent.putExtra(Constant.ID,functions1.getId());
+                    intent.putExtra(Constant.FUNCTIONAME,functions1.getFunction_name());
+                    activity.startActivity(intent);
+
+                }else {
+                    Intent intent = new Intent(activity, MoirReceivedDetailsActivity.class);
+                    intent.putExtra(Constant.ID,functions1.getId());
+                    intent.putExtra(Constant.FUNCTIONAME,functions1.getFunction_name());
+                    activity.startActivity(intent);
+
+                }
+
             }
         });
 
