@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.GreyMatter.moi.MoirResivedDetailsActivity;
 import com.GreyMatter.moi.R;
 import com.GreyMatter.moi.helper.Session;
-import com.GreyMatter.moi.model.Moirecived;
 import com.GreyMatter.moi.model.Moireciveddetails;
 import com.bumptech.glide.Glide;
 

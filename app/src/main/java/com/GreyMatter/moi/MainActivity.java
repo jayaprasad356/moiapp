@@ -2,7 +2,6 @@ package com.GreyMatter.moi;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Activity;
@@ -62,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         tvMoirecive.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,MoirecivingfunctionActivity.class);
+                Intent intent = new Intent(MainActivity.this, FunctionListActivity.class);
                 startActivity(intent);
             }
         });
