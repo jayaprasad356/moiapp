@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/yellow"
+    tools:context=".layoutActivity"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="தவிர்க்கவும்"
+            android:layout_gravity="end"
+            android:layout_marginEnd="40dp"
+            android:padding="10dp"
+            android:gravity="end"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="தவிர்க்கவும்"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:textSize="19sp"
+            android:layout_marginStart="30dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/img_intro"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/onboardimgone"
+        android:scaleY="0.8"
+        android:scaleX="0.8"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_marginTop="20dp"
+        android:text="ஒருவருக்கு நீங்கள்‌ செய்த
+மொய்களையும்‌, அவர்‌ உங்களுக்கு
+திரும்ப செய்த மொய்களையும்‌ ஆராய்ந்து
+கொள்ளுங்கள்."
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

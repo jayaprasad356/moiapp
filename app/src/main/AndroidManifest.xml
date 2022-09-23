@@ -58,6 +58,12 @@
         android:theme="@style/Theme.Moi"
         tools:targetApi="31">
         <activity
+            android:name=".layoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TutorialScreen"
+            android:exported="false" />
+        <activity
             android:name=".ProfileViewActivity"
             android:exported="false" />
         <activity
@@ -95,10 +101,13 @@
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
+        <activity
+            android:name=".IntroActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
