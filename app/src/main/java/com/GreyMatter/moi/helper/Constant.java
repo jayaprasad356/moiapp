@@ -4,9 +4,9 @@ public class Constant {
     public static final String MainBaseUrl = "https://moiapp.greymatterworks.in/";
     public static final String BaseUrl = MainBaseUrl + "api/";
     public static final String LOGIN_URL = BaseUrl + "login.php";
-    public static final String SIGN_UP = BaseUrl + "signup.php";
-    public static final String CATEGORY_LIST = BaseUrl + "category-list.php";
-    public static final String USER_DETAILS_URL = BaseUrl + "userdetails.php";
+    public static final String ADDMOI = BaseUrl + "add-moi.php";
+    public static final String MOI_LIST_BY_FIDS = BaseUrl + "moi-list-by-fids.php";
+
 
 
     public static final String ID = "id";
@@ -34,8 +34,11 @@ public class Constant {
     public static final String REGISTERUSER = BaseUrl + "registeruser.php";
     public static final String ADDFUNCTION = BaseUrl + "add-function.php";
     public static final String FUNCTIONAME = "function_name";
+    public static final String FUNCTIONID = "function_id";
     public static final String DATE = "date";
     public static final String FUNCTIONLIST = BaseUrl + "functions-list.php";
     public static final String MOILIST = BaseUrl + "moi-list.php";
     public static final String DASHBOARD = BaseUrl + "dashboard.php";
+    public static final String AMOUNT = "amount";
+    public static final String ORGANIZER_ID = "organizer_id";
 }

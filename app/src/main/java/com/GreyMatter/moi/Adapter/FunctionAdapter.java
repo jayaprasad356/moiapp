@@ -53,13 +53,13 @@ public class FunctionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             public void onClick(View view) {
                 if (MOiIntent.equals("addmoi")){
                     Intent intent = new Intent(activity, MoiReceiveActivity.class);
-                    intent.putExtra(Constant.ID,functions1.getId());
+                    intent.putExtra(Constant.FUNCTIONID,functions1.getId());
                     intent.putExtra(Constant.FUNCTIONAME,functions1.getFunction_name());
                     activity.startActivity(intent);
 
                 }else {
                     Intent intent = new Intent(activity, MoirReceivedDetailsActivity.class);
-                    intent.putExtra(Constant.ID,functions1.getId());
+                    intent.putExtra(Constant.FUNCTIONID,functions1.getId());
                     intent.putExtra(Constant.FUNCTIONAME,functions1.getFunction_name());
                     activity.startActivity(intent);
 

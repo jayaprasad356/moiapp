@@ -9,7 +9,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 
 import com.GreyMatter.moi.Adapter.FunctionAdapter;
@@ -26,13 +29,14 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener{
     MaterialCardView homecard1,homecard2;
     Activity activity;
     RecyclerView recyclerview;
     TextView tvMoiSent,tvMoirecive;
     Session session;
     FunctionAdapter functionAdapter;
+    ImageView imgMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +47,18 @@ public class MainActivity extends AppCompatActivity {
 
         homecard1 = findViewById(R.id.homecard1);
         homecard2 = findViewById(R.id.homecard2);
+        imgMenu = findViewById(R.id.imgMenu);
         tvMoiSent = findViewById(R.id.tvMoiSent);
         tvMoirecive = findViewById(R.id.tvMoirecive);
         recyclerview = findViewById(R.id.recyclerview);
+
+
+        imgMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showpopup(view);
+            }
+        });
 
         homecard1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,6 +98,9 @@ public class MainActivity extends AppCompatActivity {
         functionList();
 
     }
+
+
+
     private void functionList() {
 
         HashMap<String,String> params = new HashMap<>();
@@ -119,4 +135,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void showpopup(View v){
+        PopupMenu popup = new PopupMenu(this,v);
+        popup.setOnMenuItemClickListener(this);
+        popup.inflate(R.menu.popup_menu);
+        popup.show();
+    }
+
+    @Override
+    public boolean onMenuItemClick(MenuItem item) {
+
+        if (item.getItemId() == R.id.logoutitem){
+            session.logoutUser(activity);
+        }
+        else if (item.getItemId() == R.id.profileitem){
+
+            Intent intent = new Intent(MainActivity .this,ProfileViewActivity.class);
+            startActivity(intent);
+
+        }
+        return false;
+    }
 }

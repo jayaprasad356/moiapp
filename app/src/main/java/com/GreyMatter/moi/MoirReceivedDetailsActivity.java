@@ -9,13 +9,26 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.GreyMatter.moi.Adapter.MoiReceiveddetailsAdapter;
+import com.GreyMatter.moi.helper.ApiConfig;
+import com.GreyMatter.moi.helper.Constant;
+import com.GreyMatter.moi.model.MoiReceiveddata;
+import com.google.gson.Gson;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 import java.util.Objects;
 
 public class MoirReceivedDetailsActivity extends AppCompatActivity {
@@ -23,7 +36,9 @@ public class MoirReceivedDetailsActivity extends AppCompatActivity {
     Activity activity;
     RecyclerView recyclerview;
     private ImageView imgMice;
+    String FunctionID;
     private EditText Search;
+    MoiReceiveddetailsAdapter moiReceiveddetailsAdapter;
 
     private final int REQUEST_CODE_SPEECH_INPUT = 0;
 
@@ -34,6 +49,8 @@ public class MoirReceivedDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_moi_received_details);
 
         activity = MoirReceivedDetailsActivity.this;
+
+        FunctionID = getIntent().getStringExtra(Constant.FUNCTIONID);
 
         imgMice = findViewById(R.id.imgMike);
         backbtn = findViewById(R.id.backbtn);
@@ -66,27 +83,67 @@ public class MoirReceivedDetailsActivity extends AppCompatActivity {
 
 
         //ends here mic method
+
         GridLayoutManager gridLayoutManager = new GridLayoutManager(activity,1);
         recyclerview.setLayoutManager(gridLayoutManager);
 
 
-       // Moiresciveddetails();
+        Moiresciveddetails();
     }
-//
-//    private void Moiresciveddetails() {
-//
-//
-//        ArrayList<Moireciveddetails> moireciveddetails = new ArrayList<>();
-//        Moireciveddetails moireciveddetails1 = new Moireciveddetails("1","1","விக்னேஷ்","9876543210","சென்னை","₹ 200");
-//
-//        moireciveddetails.add(moireciveddetails1);
-//
-//
-//
-//        moireciveddetailsAdapter = new MoireciveddetailsAdapter(activity, moireciveddetails);
-//        recyclerview.setAdapter(moireciveddetailsAdapter);
-//
-//    }
+
+    private void Moiresciveddetails() {
+
+
+        Map<String, String> params = new HashMap<>();
+        params.put(Constant.FUNCTIONID,FunctionID);
+
+        ApiConfig.RequestToVolley((result, response) -> {
+            Log.d("SIGNUP_RES",FunctionID);
+
+            if (result) {
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
+                    Log.d("SIGNUP_RES",response);
+                    if (jsonObject.getBoolean(Constant.SUCCESS)) {
+                        JSONObject object = new JSONObject(response);
+                        JSONArray jsonArray = object.getJSONArray(Constant.DATA);
+                        Gson g = new Gson();
+                        ArrayList<MoiReceiveddata> moiReceiveddata = new ArrayList<>();
+
+                        for (int i = 0; i < jsonArray.length(); i++) {
+                            JSONObject jsonObject1 = jsonArray.getJSONObject(i);
+
+                            if (jsonObject1 != null) {
+                                MoiReceiveddata group = g.fromJson(jsonObject1.toString(), MoiReceiveddata.class);
+                                moiReceiveddata.add(group);
+                            } else {
+                                break;
+                            }
+                        }
+
+                        moiReceiveddetailsAdapter = new MoiReceiveddetailsAdapter(activity, moiReceiveddata,R.layout.moi_recived_details, moiReceiveddata.size());
+                        recyclerview.setAdapter(moiReceiveddetailsAdapter);
+
+
+
+                    }
+                    else {
+                        Toast.makeText(activity, ""+String.valueOf(jsonObject.getString(Constant.MESSAGE)), Toast.LENGTH_SHORT).show();
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Toast.makeText(activity, String.valueOf(e), Toast.LENGTH_SHORT).show();
+                }
+            }
+        }, activity, Constant.MOI_LIST_BY_FIDS, params, true);
+
+
+
+
+
+
+    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode,
