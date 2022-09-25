@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "158054390925",
+    "project_id": "moiapp-75111",
+    "storage_bucket": "moiapp-75111.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:158054390925:android:f4b88acd37b182fae1d6c4",
+        "android_client_info": {
+          "package_name": "com.GreyMatter.moi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "158054390925-r110l4jj8qohc5utategqrcf28mqc5ja.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjD0imu-_Wibyfi8i1qRrQTbCaLjzOLyk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "158054390925-r110l4jj8qohc5utategqrcf28mqc5ja.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

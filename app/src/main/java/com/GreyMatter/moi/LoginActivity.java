@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
                 } else{
                     //need to change this after using shared preferences
                    Intent i = new Intent(activity,OtpActivity.class);
-                    i.putExtra(Constant.MOBILENUMBER,etPhoneNumber.getText().toString());
+                    i.putExtra(Constant.MOBILE,etPhoneNumber.getText().toString());
                     startActivity(i);
 
                 }

@@ -8,7 +8,7 @@
         <entry key="..\:/moiapp/app/src/main/res/drawable/custom_progress_dialog.xml" value="0.1" />
         <entry key="..\:/moiapp/app/src/main/res/drawable/edbg.xml" value="0.1185" />
         <entry key="..\:/moiapp/app/src/main/res/drawable/search_bg.xml" value="0.1185" />
-        <entry key="..\:/moiapp/app/src/main/res/layout/activity_addfunction.xml" value="0.20416666666666666" />
+        <entry key="..\:/moiapp/app/src/main/res/layout/activity_addfunction.xml" value="0.2" />
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_amountrecived.xml" value="0.17192982456140352" />
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_amountsent.xml" value="0.25" />
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_login.xml" value="0.16842105263157894" />
@@ -33,6 +33,7 @@
         <entry key="..\:/moiapp/app/src/main/res/layout/moi_send_list.xml" value="0.24740932642487046" />
         <entry key="..\:/moiapp/app/src/main/res/layout/moi_sending_function.xml" value="0.17192982456140352" />
         <entry key="..\:/moiapp/app/src/main/res/layout/moi_upcoming_function.xml" value="0.17192982456140352" />
+        <entry key="..\:/moiapp/app/src/main/res/layout/new_user_layout.xml" value="0.17192982456140352" />
         <entry key="..\:/moiapp/app/src/main/res/menu/popup_menu.xml" value="0.17192982456140352" />
       </map>
     </option>

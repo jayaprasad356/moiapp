@@ -16,10 +16,12 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 
 import com.GreyMatter.moi.Adapter.FunctionAdapter;
+import com.GreyMatter.moi.Adapter.MoiSentFunctionAdapter;
 import com.GreyMatter.moi.helper.ApiConfig;
 import com.GreyMatter.moi.helper.Constant;
 import com.GreyMatter.moi.helper.Session;
 import com.GreyMatter.moi.model.Functions;
+import com.GreyMatter.moi.model.MoiSentFunctions;
 import com.google.android.material.card.MaterialCardView;
 import com.google.gson.Gson;
 
@@ -35,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
     RecyclerView recyclerview;
     TextView tvMoiSent,tvMoirecive;
     Session session;
-    FunctionAdapter functionAdapter;
+    MoiSentFunctionAdapter moiSentFunctionAdapter;
     ImageView imgMenu;
 
     @Override
@@ -110,30 +112,29 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     if(jsonObject.getBoolean(SUCCESS)){
-                        JSONArray jsonArray = jsonObject.getJSONArray(Constant.RECENT_FUNCTIONS);
+                        JSONArray jsonArray = jsonObject.getJSONArray(Constant.DATA);
                         Gson g = new Gson();
-                        ArrayList<Functions> functions = new ArrayList<>();
+                        ArrayList<MoiSentFunctions> moiSentFunctions = new ArrayList<>();
 
                         for (int i = 0; i < jsonArray.length(); i++) {
                             JSONObject jsonObject1 = jsonArray.getJSONObject(i);
                             if (jsonObject1 != null) {
-                                Functions group = g.fromJson(jsonObject1.toString(), Functions.class);
-                                functions.add(group);
+                                MoiSentFunctions group = g.fromJson(jsonObject1.toString(), MoiSentFunctions.class);
+                                moiSentFunctions.add(group);
                             } else {
                                 break;
                             }
                         }
-                        functionAdapter = new FunctionAdapter(activity, functions,"moidetails");
-                        recyclerview.setAdapter(functionAdapter);
+                        moiSentFunctionAdapter = new MoiSentFunctionAdapter(activity, moiSentFunctions);
+                        recyclerview.setAdapter(moiSentFunctionAdapter);
                     }
                 }catch (Exception e) {
                     e.printStackTrace();
                 }
             }
-        },activity, Constant.DASHBOARD,params,true);
+        },activity, Constant.MOILIST,params,true);
 
     }
-
 
     public void showpopup(View v){
         PopupMenu popup = new PopupMenu(this,v);

@@ -219,7 +219,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="கலந்துகொளஂள வேணஂடிய விசேஷஙஂகளஂ"
+            android:text="கலந்தகொண்ட விசேஷஙஂகளஂ"
             android:padding="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
             android:textColor="@color/text_color"

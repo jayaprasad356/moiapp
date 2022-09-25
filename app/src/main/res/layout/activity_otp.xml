@@ -31,7 +31,7 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
+                    android:layout_height="250dp"
                     android:layout_centerInParent="true"
                     android:src="@drawable/otp_assests" />
             </RelativeLayout>
@@ -48,6 +48,7 @@
                 android:layout_marginTop="30dp"/>
 
             <TextView
+                android:id="@+id/tvMobile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="அனுப்பப்பட்ட otp ஐ உள்ளிடவும் (+91 9361******)"
@@ -80,6 +81,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -103,7 +105,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="சரிபார்க்க"
-                android:layout_marginVertical="50dp"
+                android:layout_marginVertical="10dp"
                 android:padding="15dp"
                 android:backgroundTint="@color/yellow"
                 android:layout_marginHorizontal="45dp"
