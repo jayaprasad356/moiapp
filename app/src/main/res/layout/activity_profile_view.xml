@@ -38,40 +38,175 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_centerInParent="true"
+        android:layout_margin="@dimen/_10sdp"
         >
 
 
         <TextView
-            android:id="@+id/tvusername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="பெயர்"
+            android:textColor="@color/font_color"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="40dp"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"/>
+
+
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Name"
-            android:textColor="@color/black"
             android:gravity="center"
-            android:textSize="@dimen/_16sdp"
-            />
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="40dp"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@drawable/edbg"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/userprofile"
+                    android:layout_marginStart="10dp"
+                    android:layout_gravity="center"/>
+
+                <EditText
+                    android:id="@+id/etUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:autofillHints="username"
+                    android:background="@null"
+                    android:hint="பெயர்"
+                    android:inputType="textPersonName"
+                    android:padding="13dp"
+                    android:textColor="@color/font_color"
+                    android:textColorHint="#A8A8A8"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="ஊர்"
+            android:textColor="@color/font_color"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="40dp"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@drawable/edbg"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/locationicon"
+                    android:layout_marginStart="10dp"
+                    android:layout_gravity="center"/>
+
+                <EditText
+                    android:id="@+id/etLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/font_color"
+                    android:textStyle="bold"
+                    android:padding="13dp"
+                    android:hint="இடம்"
+                    android:textColorHint="#A8A8A8"
+                    android:autofillHints="postalAddress"
+                    android:inputType="textPersonName"
+                    android:background="@null"/>
+            </LinearLayout>
+        </LinearLayout>
 
 
         <TextView
-            android:id="@+id/tvmobilenumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="கைபேசி எண்"
+            android:textColor="@color/font_color"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="mobile"
-            android:textColor="@color/black"
             android:gravity="center"
-            android:textSize="@dimen/_14sdp"
-            />
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="40dp"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@drawable/edbg"
+                android:orientation="horizontal">
 
 
+                <EditText
+                    android:id="@+id/etMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/font_color"
+                    android:textStyle="bold"
+                    android:padding="13dp"
+                    android:hint="கைபேசி எண்"
+                    android:textColorHint="#A8A8A8"
+                    android:autofillHints="postalAddress"
+                    android:inputType="textPersonName"
+                    android:background="@null"/>
+            </LinearLayout>
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvplace"
+        <Button
+            android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="place"
-            android:gravity="center"
-            android:textSize="@dimen/_12sdp"
-            />
+            android:text="சேமிக்க"
+            android:layout_marginVertical="40dp"
+            android:padding="15dp"
+            android:backgroundTint="@color/yellow"
+            android:layout_marginHorizontal="95dp"
+            android:textColor="@color/black"/>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

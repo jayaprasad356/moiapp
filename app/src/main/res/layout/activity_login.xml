@@ -87,15 +87,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@null"
-                    android:padding="10dp"
                     android:hint="கைபேசி எண்"
                     android:inputType="number"
-                    android:textStyle="bold"
-                    android:textColorHint="#797979"
-                    android:maxLength="10"
                     android:letterSpacing="0.1"
+                    android:maxLength="10"
+                    android:padding="10dp"
                     android:textColor="@color/font_color"
-                    android:textSize="17sp" />
+                    android:textColorHint="#797979"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
             </LinearLayout>
             <Button
                 android:id="@+id/btnLogin"

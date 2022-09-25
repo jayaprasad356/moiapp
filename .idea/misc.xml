@@ -11,6 +11,7 @@
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_addfunction.xml" value="0.20416666666666666" />
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_amountrecived.xml" value="0.17192982456140352" />
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_amountsent.xml" value="0.25" />
+        <entry key="..\:/moiapp/app/src/main/res/layout/activity_login.xml" value="0.16842105263157894" />
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_login_screen.xml" value="0.2" />
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_moi_receive.xml" value="0.17192982456140352" />
@@ -24,7 +25,7 @@
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_newmemeberadd.xml" value="0.17192982456140352" />
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_otp.xml" value="0.20416666666666666" />
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_profile.xml" value="0.17192982456140352" />
-        <entry key="..\:/moiapp/app/src/main/res/layout/activity_profile_view.xml" value="0.16842105263157894" />
+        <entry key="..\:/moiapp/app/src/main/res/layout/activity_profile_view.xml" value="0.33" />
         <entry key="..\:/moiapp/app/src/main/res/layout/attending_function_list.xml" value="0.25" />
         <entry key="..\:/moiapp/app/src/main/res/layout/moi_recived_details.xml" value="0.17192982456140352" />
         <entry key="..\:/moiapp/app/src/main/res/layout/moi_recived_list.xml" value="0.20416666666666666" />

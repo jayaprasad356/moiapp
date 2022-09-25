@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.Editable;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,7 +15,7 @@ import com.GreyMatter.moi.helper.Session;
 
 public class ProfileViewActivity extends AppCompatActivity {
 
-    TextView tvplace,tvmobilenumber,tvusername;
+    EditText tvplace,tvmobilenumber,tvusername;
     Session session;
     Activity activity;
     ImageView backbtn;
@@ -26,9 +28,9 @@ public class ProfileViewActivity extends AppCompatActivity {
         session = new Session(activity);
 
 
-        tvusername = findViewById(R.id.tvusername);
-        tvplace = findViewById(R.id.tvplace);
-        tvmobilenumber = findViewById(R.id.tvmobilenumber);
+        tvusername = findViewById(R.id.etUsername);
+        tvplace = findViewById(R.id.etLocation);
+        tvmobilenumber = findViewById(R.id.etMobile);
         backbtn = findViewById(R.id.backbtn);
 
         backbtn.setOnClickListener(new View.OnClickListener() {
@@ -40,11 +42,6 @@ public class ProfileViewActivity extends AppCompatActivity {
 
 
 
-
-
-        tvusername.setText(session.getData(Constant.NAME));
-        tvplace.setText(session.getData(Constant.LOCATION));
-        tvmobilenumber.setText(session.getData(Constant.MOBILE));
 
 
 
