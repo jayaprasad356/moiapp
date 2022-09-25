@@ -97,7 +97,7 @@
             android:name=".AddfunctionActivity"
             android:exported="false" />
         <activity
-            android:name=".Otp"
+            android:name=".OtpActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"

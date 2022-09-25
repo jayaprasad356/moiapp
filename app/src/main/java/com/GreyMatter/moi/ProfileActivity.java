@@ -67,7 +67,10 @@ public class ProfileActivity extends AppCompatActivity {
                     JSONObject jsonObject = new JSONObject(Response);
                     if (jsonObject.getBoolean(Constant.SUCCESS)) {
                         JSONArray jsonArray = jsonObject.getJSONArray(Constant.DATA);
-
+                        session.setData(Constant.ID,jsonArray.getJSONObject(0).getString(Constant.ID));
+                        session.setData(Constant.NAME,jsonArray.getJSONObject(0).getString(Constant.NAME));
+                        session.setData(Constant.MOBILE,jsonArray.getJSONObject(0).getString(Constant.MOBILE));
+                        session.setData(Constant.LOCATION,jsonArray.getJSONObject(0).getString(Constant.LOCATION));
                         session.setBoolean("is_logged_in", true);
                         session.setData(Constant.ID,jsonArray.getJSONObject(0).getString(Constant.ID));
                         startActivity(new Intent(activity, MainActivity.class));

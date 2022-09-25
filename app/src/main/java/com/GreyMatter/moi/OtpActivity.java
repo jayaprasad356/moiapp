@@ -5,9 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import com.GreyMatter.moi.helper.ApiConfig;
@@ -20,56 +18,57 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class LoginActivity extends AppCompatActivity {
+import in.aabhasjindal.otptextview.OtpTextView;
 
-    private EditText etPhoneNumber;
-    private Button btnLogin;
+public class OtpActivity extends AppCompatActivity {
+
+    private Button BtnLogin;
+    private String Mnumber;
+    private OtpTextView otpTextView;
     Activity activity;
     Session session;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-        etPhoneNumber = findViewById(R.id.etMobile);
-        btnLogin = findViewById(R.id.btnLogin);
-        activity = LoginActivity.this;
+        setContentView(R.layout.activity_otp);
+        activity =  OtpActivity.this;
         session = new Session(activity);
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(etPhoneNumber.getText().toString().isEmpty()) {
-                    Toast.makeText(activity, "தொடர தொலைபேசி எண்ணை உள்ளிடவும்", Toast.LENGTH_LONG).show(); //Enter phone number to proceed
-                }else if(etPhoneNumber.getText().toString().length()!=10) {
-                    Toast.makeText(activity, "தவறான மொபைல் எண்", Toast.LENGTH_SHORT).show();
-                } else{
-                    //need to change this after using shared preferences
-                   Intent i = new Intent(activity,OtpActivity.class);
-                    i.putExtra(Constant.MOBILENUMBER,etPhoneNumber.getText().toString());
-                    startActivity(i);
 
-                }
+        BtnLogin = findViewById(R.id.btnLogin);
+        otpTextView = findViewById(R.id.optView);
+
+        Mnumber = getIntent().getStringExtra(Constant.MOBILENUMBER);
+        BtnLogin.setOnClickListener(v -> {
+            if(otpTextView.getOTP().isEmpty() || otpTextView.getOTP().length() != 6) {
+                Toast.makeText(this, "தவறான otp", Toast.LENGTH_SHORT).show();
+            }else{
+
+                VerifyUser();
+//                startActivity(new Intent(this,ProfileActivity.class));
             }
         });
-
     }
+
 
     private void VerifyUser() {
         Map<String,String> params = new HashMap<>();
-        params.put(Constant.MOBILENUMBER,etPhoneNumber.getText().toString().trim());
+        params.put(Constant.MOBILENUMBER,Mnumber);
         ApiConfig.RequestToVolley((result,response) -> {
             if(result) {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     if(jsonObject.getBoolean(Constant.NEWUSER)) {
-                       Intent i = new Intent(activity,ProfileActivity.class);
-                       i.putExtra(Constant.MOBILENUMBER,etPhoneNumber.getText().toString());
-                       startActivity(i);
+                        Intent i = new Intent(activity,ProfileActivity.class);
+                        i.putExtra(Constant.MOBILENUMBER,Mnumber);
+                        startActivity(i);
                     }else{
                         JSONArray jsonArray = jsonObject.getJSONArray(Constant.DATA);
                         session.setBoolean("is_logged_in", true);
                         session.setData(Constant.ID,jsonArray.getJSONObject(0).getString(Constant.ID));
                         startActivity(new Intent(activity,
                                 MainActivity.class));
+                        finish();
                     }
                     finish();
                 }catch (Exception e) {
@@ -80,4 +79,5 @@ public class LoginActivity extends AppCompatActivity {
             }
         },activity,Constant.LOGIN_URL,params,true);
     }
+
 }
