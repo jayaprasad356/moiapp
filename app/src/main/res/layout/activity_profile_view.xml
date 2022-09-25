@@ -41,6 +41,14 @@
         >
 
 
+        <ImageView
+            android:layout_width="@dimen/_105sdp"
+            android:layout_height="@dimen/_105sdp"
+            android:src="@drawable/userprofile"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center"/>
+
+
         <TextView
             android:id="@+id/tvusername"
             android:layout_width="match_parent"
