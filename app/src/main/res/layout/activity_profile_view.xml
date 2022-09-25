@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:gravity="center"
-            android:text="Profile"
+            android:text="சுயவிவரம்"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
@@ -39,14 +39,6 @@
         android:orientation="vertical"
         android:layout_centerInParent="true"
         >
-
-
-        <ImageView
-            android:layout_width="@dimen/_105sdp"
-            android:layout_height="@dimen/_105sdp"
-            android:src="@drawable/userprofile"
-            android:layout_marginStart="10dp"
-            android:layout_gravity="center"/>
 
 
         <TextView

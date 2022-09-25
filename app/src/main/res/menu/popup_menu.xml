@@ -6,11 +6,11 @@
 
 
     <item android:id="@+id/profileitem"
-        android:title="Profile">
+        android:title="சுயவிவரம்">
     </item>
 
     <item android:id="@+id/logoutitem"
-        android:title="Logout">
+        android:title="வெளியேறு">
     </item>
 
 </menu>
