@@ -34,172 +34,113 @@
     </RelativeLayout>
 
     <LinearLayout
+        android:id="@+id/l1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_centerInParent="true"
-        android:layout_marginStart="@dimen/_10sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginEnd="@dimen/_10sdp"
-        android:layout_marginBottom="@dimen/_10sdp"
-        android:orientation="vertical">
+        >
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginHorizontal="40dp"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:text="பெயர்"
-            android:textColor="@color/font_color"
-            android:textSize="20sp"
-            android:textStyle="bold" />
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginHorizontal="40dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
             android:orientation="vertical">
 
-            <LinearLayout
+
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="65dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:text="பெயரஂ"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp" />
+
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
                 android:background="@drawable/edbg"
-                android:orientation="horizontal">
+                android:padding="@dimen/_10sdp"
+                android:drawableStart="@drawable/ic_baseline_person_outline_24"
+                android:drawableTint="@color/primary"
+                android:textColor="@color/font_color"
+                android:textSize="19sp" />
 
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="10dp"
-                    android:src="@drawable/userprofile" />
 
-                <EditText
-                    android:id="@+id/etUsername"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:autofillHints="username"
-                    android:background="@null"
-                    android:hint="பெயர்"
-                    android:inputType="textPersonName"
-                    android:padding="13dp"
-                    android:textColor="@color/font_color"
-                    android:textColorHint="#A8A8A8"
-                    android:textStyle="bold" />
-            </LinearLayout>
         </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginHorizontal="40dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="ஊர்"
-            android:textColor="@color/font_color"
-            android:textSize="20sp"
-            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginHorizontal="40dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
             android:orientation="vertical">
 
-            <LinearLayout
+
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="65dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:text="கைபேசி எண்"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp" />
+
+
+            <EditText
+                android:id="@+id/etMobile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
                 android:background="@drawable/edbg"
-                android:orientation="horizontal">
+                android:maxLength="10"
+                android:enabled="false"
+                android:inputType="number"
+                android:drawableStart="@drawable/ic_baseline_phone_iphone_24"
+                android:drawableTint="@color/primary"
+                android:padding="@dimen/_10sdp"
+                android:textColor="@color/font_color"
+                android:textSize="19sp" />
 
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="10dp"
-                    android:src="@drawable/locationicon" />
 
-                <EditText
-                    android:id="@+id/etLocation"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:autofillHints="postalAddress"
-                    android:background="@null"
-                    android:hint="இடம்"
-                    android:inputType="textPersonName"
-                    android:padding="13dp"
-                    android:textColor="@color/font_color"
-                    android:textColorHint="#A8A8A8"
-                    android:textStyle="bold" />
-            </LinearLayout>
         </LinearLayout>
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_marginHorizontal="40dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="கைபேசி எண்"
-            android:textColor="@color/font_color"
-            android:textSize="20sp"
-            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginHorizontal="40dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
             android:orientation="vertical">
 
-            <LinearLayout
+
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="65dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:text="ஊர்"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp" />
+
+
+            <EditText
+                android:id="@+id/etPlace"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
                 android:background="@drawable/edbg"
-                android:orientation="horizontal">
+                android:padding="@dimen/_10sdp"
+                android:drawableStart="@drawable/ic_baseline_location_on_24"
+                android:drawableTint="@color/primary"
+                android:textColor="@color/font_color"
+                android:textSize="19sp" />
 
 
-                <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="10dp"
-                    android:backgroundTint="@color/primary"
-                    android:background="@drawable/ic_baseline_phone_iphone_24" />
-
-
-
-
-                <EditText
-                    android:id="@+id/etMobile"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:autofillHints="postalAddress"
-                    android:background="@null"
-                    android:hint="கைபேசி எண்"
-                    android:inputType="textPersonName"
-                    android:padding="13dp"
-                    android:textColor="@color/font_color"
-                    android:textColorHint="#A8A8A8"
-                    android:textStyle="bold" />
-            </LinearLayout>
         </LinearLayout>
-
         <Button
-            android:id="@+id/btnverify"
+            android:id="@+id/btnUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="95dp"
@@ -211,6 +152,5 @@
 
 
     </LinearLayout>
-
 
 </RelativeLayout>

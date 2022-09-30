@@ -8,7 +8,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.GreyMatter.moi"
+        applicationId "com.greymatter.moi"
         minSdk 22
         targetSdk 32
         versionCode 1

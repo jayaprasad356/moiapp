@@ -10,47 +10,39 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/primary"
-            android:padding="10dp"
             android:orientation="vertical"
-            >
+            android:padding="10dp">
 
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:padding="@dimen/_10sdp"
                 android:layout_height="wrap_content"
-                >
+                android:padding="@dimen/_10sdp">
 
 
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="மொய் செயலி"
-                android:textStyle="bold"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_14sdp"
-                />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="மொய் செயலி"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/imgMenu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:padding="@dimen/_10sdp"
+                    android:background="@drawable/ic_baseline_more_vert_24"
                     android:backgroundTint="@color/white"
-                    android:background="@drawable/ic_baseline_more_vert_24" />
-
-
-
+                    android:padding="@dimen/_10sdp" />
 
 
             </RelativeLayout>
@@ -59,74 +51,70 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="2"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:layout_marginBottom="@dimen/_20sdp"
+                android:orientation="horizontal"
+                android:weightSum="2"
 
                 >
 
 
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/homecard1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:cardCornerRadius="@dimen/_10sdp"
                     android:layout_marginRight="@dimen/_5sdp"
-                    android:id="@+id/homecard1"
-                    >
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/_10sdp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="@dimen/_20sdp"
                         android:background="@drawable/card_home1"
-                        >
+                        android:orientation="vertical"
+                        android:padding="@dimen/_20sdp">
+
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="மொயஂ செயஂதது"
                             android:textColor="@color/white"
-                            android:textSize="@dimen/_10sdp"
-                            />
+                            android:textSize="@dimen/_10sdp" />
 
                         <TextView
-                            android:paddingTop="@dimen/_10sdp"
+                            android:id="@+id/tvDebit"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="₹ 10000"
-                            android:textStyle="bold"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:text="₹ 0"
                             android:textColor="@color/white"
                             android:textSize="@dimen/_14sdp"
-                            />
+                            android:textStyle="bold" />
                     </LinearLayout>
 
 
                     <ImageView
-                        android:layout_gravity="bottom|right"
                         android:layout_width="@dimen/_40sdp"
                         android:layout_height="@dimen/_40sdp"
-                        android:background="@drawable/homecard1"
+                        android:layout_gravity="bottom|right"
                         android:layout_margin="@dimen/_5sdp"
-                        />
+                        android:background="@drawable/homecard1" />
 
                 </com.google.android.material.card.MaterialCardView>
+
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/homecard2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:cardCornerRadius="@dimen/_10sdp"
-                    android:id="@+id/homecard2"
-                    >
+                    app:cardCornerRadius="@dimen/_10sdp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="@dimen/_20sdp"
                         android:background="@drawable/card_home2"
-                        >
+                        android:orientation="vertical"
+                        android:padding="@dimen/_20sdp">
 
                         <TextView
                             android:layout_width="match_parent"
@@ -136,23 +124,22 @@
                             android:textSize="@dimen/_10sdp" />
 
                         <TextView
-                            android:paddingTop="@dimen/_10sdp"
+                            android:id="@+id/tvCredit"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="₹ 10000"
-                            android:textStyle="bold"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:text="₹ 0"
                             android:textColor="@color/white"
                             android:textSize="@dimen/_14sdp"
-                            />
+                            android:textStyle="bold" />
                     </LinearLayout>
 
                     <ImageView
-                        android:layout_gravity="bottom|right"
                         android:layout_width="@dimen/_40sdp"
                         android:layout_height="@dimen/_40sdp"
-                        android:background="@drawable/homecard2"
+                        android:layout_gravity="bottom|right"
                         android:layout_margin="@dimen/_5sdp"
-                        />
+                        android:background="@drawable/homecard2" />
 
                 </com.google.android.material.card.MaterialCardView>
 
@@ -166,52 +153,49 @@
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_20sdp"
-            app:strokeColor="@color/primary"
-            app:strokeWidth="@dimen/_1sdp"
             android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
             android:layout_marginRight="@dimen/_10sdp"
-            >
+            app:strokeColor="@color/primary"
+            app:strokeWidth="@dimen/_1sdp">
 
 
             <TextView
                 android:id="@+id/tvMoiSent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="மொய் செயஂய "
-                android:textSize="@dimen/_14sdp"
-                android:textColor="@color/black"
-                android:padding="@dimen/_14sdp"
-                android:visibility="gone"
-                android:textStyle="bold"
                 android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
                 android:drawableTint="@color/black"
-                />
+                android:padding="@dimen/_14sdp"
+                android:text="மொய் செயஂய "
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:visibility="gone" />
 
         </com.google.android.material.card.MaterialCardView>
+
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_20sdp"
-            app:strokeColor="@color/primary"
-            app:strokeWidth="@dimen/_1sdp"
             android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
             android:layout_marginRight="@dimen/_10sdp"
-            >
+            app:strokeColor="@color/primary"
+            app:strokeWidth="@dimen/_1sdp">
 
 
             <TextView
                 android:id="@+id/tvMoirecive"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="மொய் பெற"
-                android:textSize="@dimen/_14sdp"
-                android:textColor="@color/black"
-                android:padding="@dimen/_14sdp"
-                android:textStyle="bold"
                 android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
                 android:drawableTint="@color/black"
-                />
+                android:padding="@dimen/_14sdp"
+                android:text="மொய் பெற"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold" />
 
         </com.google.android.material.card.MaterialCardView>
 
@@ -219,22 +203,18 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="கலந்தகொண்ட விசேஷஙஂகளஂ"
-            android:padding="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
+            android:padding="@dimen/_10sdp"
+            android:text="கலந்தகொண்ட விசேஷஙஂகளஂ"
             android:textColor="@color/text_color"
-            android:textStyle="bold"
-            />
-
+            android:textStyle="bold" />
 
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/_10sdp"
-            android:id="@+id/recyclerview"
-            />
-
+            android:padding="@dimen/_10sdp" />
 
 
     </LinearLayout>

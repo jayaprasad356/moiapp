@@ -88,7 +88,7 @@
                 android:background="@drawable/edbg"
                 android:maxLength="10"
                 android:inputType="number"
-                android:drawableStart="@drawable/ic_baseline_location_on_24"
+                android:drawableStart="@drawable/ic_baseline_phone_iphone_24"
                 android:drawableTint="@color/primary"
                 android:padding="@dimen/_10sdp"
                 android:textColor="@color/font_color"
@@ -120,7 +120,7 @@
                 android:layout_marginRight="@dimen/_10sdp"
                 android:background="@drawable/edbg"
                 android:padding="@dimen/_10sdp"
-                android:drawableStart="@drawable/ic_baseline_phone_iphone_24"
+                android:drawableStart="@drawable/ic_baseline_location_on_24"
                 android:drawableTint="@color/primary"
                 android:textColor="@color/font_color"
                 android:textSize="19sp" />

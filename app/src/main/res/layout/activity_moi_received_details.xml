@@ -28,6 +28,7 @@
 
 
             <TextView
+                android:id="@+id/tvTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
@@ -48,6 +49,7 @@
             android:layout_marginRight="@dimen/_20sdp"
             android:background="@drawable/search_bg"
             android:padding="@dimen/_14sdp"
+            android:visibility="gone"
             >
 
             <EditText

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.GreyMatter.moi">
+    package="com.greymatter.moi">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -47,7 +47,7 @@
         tools:ignore="ProtectedPermissions" />
 
     <application
-        android:name=".helper.ApiConfig"
+        android:name="com.greymatter.moi.helper.ApiConfig"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -58,19 +58,19 @@
         android:theme="@style/Theme.Moi"
         tools:targetApi="31">
         <activity
-            android:name=".layoutActivity"
+            android:name="com.greymatter.moi.layoutActivity"
             android:exported="false" />
         <activity
-            android:name=".TutorialScreen"
+            android:name="com.greymatter.moi.TutorialScreen"
             android:exported="false" />
         <activity
-            android:name=".ProfileViewActivity"
+            android:name="com.greymatter.moi.ProfileViewActivity"
             android:exported="false" />
         <activity
-            android:name=".ProfileActivity"
+            android:name="com.greymatter.moi.ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".Splash"
+            android:name="com.greymatter.moi.Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -79,34 +79,34 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MoisenddetailsActivity"
+            android:name="com.greymatter.moi.MoisenddetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".FunctionListActivity"
+            android:name="com.greymatter.moi.FunctionListActivity"
             android:exported="false" />
         <activity
-            android:name=".MoisentamountActivity"
+            android:name="com.greymatter.moi.MoisentamountActivity"
             android:exported="false" />
         <activity
-            android:name=".MoiReceiveActivity"
+            android:name="com.greymatter.moi.MoiReceiveActivity"
             android:exported="false" />
         <activity
-            android:name=".MoirReceivedDetailsActivity"
+            android:name="com.greymatter.moi.MoirReceivedDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".AddfunctionActivity"
+            android:name="com.greymatter.moi.AddfunctionActivity"
             android:exported="false" />
         <activity
-            android:name=".OtpActivity"
+            android:name="com.greymatter.moi.OtpActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name="com.greymatter.moi.LoginActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.greymatter.moi.MainActivity"
             android:exported="true" />
         <activity
-            android:name=".IntroActivity"
+            android:name="com.greymatter.moi.IntroActivity"
             android:exported="true" />
     </application>
 
