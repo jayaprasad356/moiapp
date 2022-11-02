@@ -10,6 +10,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -28,7 +31,7 @@ import java.util.Map;
 public class MoiReceiveActivity extends AppCompatActivity {
 
     Button newmemberbtn;
-    private EditText etMobile;
+    private AutoCompleteTextView etMobile;
     private EditText etAmount;
     private Button btnSubmit;
     TextView tvFunName;
@@ -37,6 +40,8 @@ public class MoiReceiveActivity extends AppCompatActivity {
     AlertDialog alertDialog;
     Session session;
 
+    private String[] TextViewData = {"john","somex","somey","somez"};
+    private ArrayAdapter<String> arrayAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +59,9 @@ public class MoiReceiveActivity extends AppCompatActivity {
         FunctionID = getIntent().getStringExtra(Constant.FUNCTIONID);
         tvFunName.setText(FunctionName);
 
+        arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line,TextViewData);
+        etMobile.setAdapter(arrayAdapter);
+        etMobile.setThreshold(2);
         newmemberbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
