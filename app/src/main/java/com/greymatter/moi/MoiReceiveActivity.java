@@ -15,8 +15,10 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 
 import com.greymatter.moi.helper.ApiConfig;
 import com.greymatter.moi.helper.Constant;
@@ -39,6 +41,7 @@ public class MoiReceiveActivity extends AppCompatActivity {
     Activity activity;
     AlertDialog alertDialog;
     Session session;
+    ImageView backbtn;
 
     private String[] TextViewData = {"john","somex","somey","somez"};
     private ArrayAdapter<String> arrayAdapter;
@@ -53,11 +56,19 @@ public class MoiReceiveActivity extends AppCompatActivity {
         btnSubmit = findViewById(R.id.btnSubmit);
         etMobile = findViewById(R.id.etMobile);
         etAmount = findViewById(R.id.etAmount);
+        backbtn = findViewById(R.id.backbtn);
 
         tvFunName = findViewById(R.id.tvFunName);
         FunctionName = getIntent().getStringExtra(Constant.FUNCTIONAME);
         FunctionID = getIntent().getStringExtra(Constant.FUNCTIONID);
-        tvFunName.setText(FunctionName);
+//        tvFunName.setText(FunctionName);
+
+        backbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line,TextViewData);
         etMobile.setAdapter(arrayAdapter);

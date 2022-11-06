@@ -189,7 +189,7 @@ public class OtpActivity extends AppCompatActivity {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     if(jsonObject.getBoolean(Constant.NEWUSER)) {
-                        Intent i = new Intent(activity,ProfileActivity.class);
+                        Intent i = new Intent(activity,MainActivity.class);
                         i.putExtra(Constant.MOBILENUMBER,Mnumber);
                         startActivity(i);
                     }else{

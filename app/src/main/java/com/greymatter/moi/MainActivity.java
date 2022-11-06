@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
     MaterialCardView homecard1,homecard2;
     Activity activity;
     RecyclerView recyclerview;
-    TextView tvMoiSent,tvMoirecive;
+    TextView tvMoiSent,tvMoirecive,tvMoicompare;
     Session session;
     MoiSentFunctionAdapter moiSentFunctionAdapter;
     ImageView imgMenu;
@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         imgMenu = findViewById(R.id.imgMenu);
         tvMoiSent = findViewById(R.id.tvMoiSent);
         tvMoirecive = findViewById(R.id.tvMoirecive);
+        tvMoicompare = findViewById(R.id.tvMoicompare);
         recyclerview = findViewById(R.id.recyclerview);
         tvDebit = findViewById(R.id.tvDebit);
         tvCredit = findViewById(R.id.tvCredit);
@@ -85,6 +86,10 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         tvMoiSent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                Intent intent = new Intent(MainActivity.this, AddMoiActivity.class);
+//                intent.putExtra(Constant.MOI,"addmoi");
+                startActivity(intent);
             }
         });
         tvMoirecive.setOnClickListener(new View.OnClickListener() {
@@ -92,6 +97,14 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, FunctionListActivity.class);
                 intent.putExtra(Constant.MOI,"addmoi");
+                startActivity(intent);
+            }
+        });
+        tvMoicompare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CompareMoiActivity.class);
+//                intent.putExtra(Constant.MOI,"addmoi");
                 startActivity(intent);
             }
         });

@@ -19,9 +19,13 @@
         <entry key="..\:/moiapp/app/src/main/res/drawable/custom_progress_dialog.xml" value="0.1" />
         <entry key="..\:/moiapp/app/src/main/res/drawable/edbg.xml" value="0.1185" />
         <entry key="..\:/moiapp/app/src/main/res/drawable/search_bg.xml" value="0.1185" />
+        <entry key="..\:/moiapp/app/src/main/res/layout/activity_add_moi.xml" value="0.22" />
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_addfunction.xml" value="0.2" />
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_amountrecived.xml" value="0.17192982456140352" />
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_amountsent.xml" value="0.25" />
+        <entry key="..\:/moiapp/app/src/main/res/layout/activity_compare_moi.xml" value="0.33" />
+        <entry key="..\:/moiapp/app/src/main/res/layout/activity_function_list.xml" value="0.15092592592592594" />
+        <entry key="..\:/moiapp/app/src/main/res/layout/activity_layout.xml" value="0.17192982456140352" />
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_login.xml" value="0.16842105263157894" />
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_login_screen.xml" value="0.2" />
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_main.xml" value="0.22" />
@@ -30,19 +34,24 @@
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_moi_recivedfunction.xml" value="0.1675213675213675" />
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_moir_resived_details.xml" value="0.22" />
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_moirecivingfunction.xml" value="0.17192982456140352" />
-        <entry key="..\:/moiapp/app/src/main/res/layout/activity_moisenddetails.xml" value="0.30173775671406006" />
+        <entry key="..\:/moiapp/app/src/main/res/layout/activity_moisenddetails.xml" value="0.16" />
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_moisentamount.xml" value="0.17192982456140352" />
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_moisentfunction.xml" value="0.17192982456140352" />
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_newmemeberadd.xml" value="0.17192982456140352" />
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_otp.xml" value="0.20416666666666666" />
         <entry key="..\:/moiapp/app/src/main/res/layout/activity_profile.xml" value="0.17192982456140352" />
-        <entry key="..\:/moiapp/app/src/main/res/layout/activity_profile_view.xml" value="0.33" />
+        <entry key="..\:/moiapp/app/src/main/res/layout/activity_profile_view.xml" value="0.16" />
+        <entry key="..\:/moiapp/app/src/main/res/layout/activity_splash.xml" value="0.15833333333333333" />
+        <entry key="..\:/moiapp/app/src/main/res/layout/activity_tutorial_screen.xml" value="0.17192982456140352" />
         <entry key="..\:/moiapp/app/src/main/res/layout/attending_function_list.xml" value="0.25" />
+        <entry key="..\:/moiapp/app/src/main/res/layout/function_layout.xml" value="0.17192982456140352" />
+        <entry key="..\:/moiapp/app/src/main/res/layout/moi_compare_layout.xml" value="0.17192982456140352" />
         <entry key="..\:/moiapp/app/src/main/res/layout/moi_recived_details.xml" value="0.17192982456140352" />
         <entry key="..\:/moiapp/app/src/main/res/layout/moi_recived_list.xml" value="0.20416666666666666" />
         <entry key="..\:/moiapp/app/src/main/res/layout/moi_recivingfunction_list.xml" value="0.17192982456140352" />
         <entry key="..\:/moiapp/app/src/main/res/layout/moi_send_list.xml" value="0.24740932642487046" />
         <entry key="..\:/moiapp/app/src/main/res/layout/moi_sending_function.xml" value="0.17192982456140352" />
+        <entry key="..\:/moiapp/app/src/main/res/layout/moi_sent_item_layout.xml" value="0.25" />
         <entry key="..\:/moiapp/app/src/main/res/layout/moi_upcoming_function.xml" value="0.17192982456140352" />
         <entry key="..\:/moiapp/app/src/main/res/layout/new_user_layout.xml" value="0.17192982456140352" />
         <entry key="..\:/moiapp/app/src/main/res/menu/popup_menu.xml" value="0.17192982456140352" />

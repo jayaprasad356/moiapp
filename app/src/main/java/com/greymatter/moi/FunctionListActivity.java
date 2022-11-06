@@ -24,6 +24,7 @@ import com.greymatter.moi.helper.Session;
 import com.greymatter.moi.model.Functions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
+import com.greymatter.moi.model.MoiCompareFunctions;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -103,34 +104,49 @@ public class FunctionListActivity extends AppCompatActivity {
 
     private void functionList() {
 
-        HashMap<String,String> params = new HashMap<>();
-        params.put(Constant.USER_ID,session.getData(Constant.ID));
-        ApiConfig.RequestToVolley((result, response) -> {
-            if(result) {
-                try {
-                    JSONObject jsonObject = new JSONObject(response);
-                    if(jsonObject.getBoolean(SUCCESS)){
-                        JSONArray jsonArray = jsonObject.getJSONArray(Constant.DATA);
-                        Gson g = new Gson();
-                        ArrayList<Functions> functions = new ArrayList<>();
 
-                        for (int i = 0; i < jsonArray.length(); i++) {
-                            JSONObject jsonObject1 = jsonArray.getJSONObject(i);
-                            if (jsonObject1 != null) {
-                                Functions group = g.fromJson(jsonObject1.toString(), Functions.class);
-                                functions.add(group);
-                            } else {
-                                break;
-                            }
-                        }
-                        functionAdapter = new FunctionAdapter(activity, functions,MOiIntent);
-                        recyclerview.setAdapter(functionAdapter);
-                    }
-                }catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        },activity, FUNCTIONLIST,params,true);
+        ArrayList<Functions> functions = new ArrayList<>();
+
+
+
+
+        Functions moiCompareFunctions1 = new Functions("1","1","நயனஂ - விக்னேஷ் திருமண விழா","","சென்னை","01-11-2022");
+
+        functions.add(moiCompareFunctions1);
+
+
+
+        functionAdapter = new FunctionAdapter(activity, functions,MOiIntent);
+        recyclerview.setAdapter(functionAdapter);
+
+//        HashMap<String,String> params = new HashMap<>();
+//        params.put(Constant.USER_ID,session.getData(Constant.ID));
+//        ApiConfig.RequestToVolley((result, response) -> {
+//            if(result) {
+//                try {
+//                    JSONObject jsonObject = new JSONObject(response);
+//                    if(jsonObject.getBoolean(SUCCESS)){
+//                        JSONArray jsonArray = jsonObject.getJSONArray(Constant.DATA);
+//                        Gson g = new Gson();
+//                        ArrayList<Functions> functions = new ArrayList<>();
+//
+//                        for (int i = 0; i < jsonArray.length(); i++) {
+//                            JSONObject jsonObject1 = jsonArray.getJSONObject(i);
+//                            if (jsonObject1 != null) {
+//                                Functions group = g.fromJson(jsonObject1.toString(), Functions.class);
+//                                functions.add(group);
+//                            } else {
+//                                break;
+//                            }
+//                        }
+//                        functionAdapter = new FunctionAdapter(activity, functions,MOiIntent);
+//                        recyclerview.setAdapter(functionAdapter);
+//                    }
+//                }catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        },activity, FUNCTIONLIST,params,true);
 
     }
 

@@ -7,6 +7,7 @@
     tools:context=".ProfileViewActivity">
 
     <RelativeLayout
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/_10sdp"
@@ -33,13 +34,42 @@
 
     </RelativeLayout>
 
+    <ScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
     <LinearLayout
         android:id="@+id/l1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_centerInParent="true"
+
         >
+ 
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="400sp"
+                android:contentDescription="@string/login_background"
+                android:scaleType="centerCrop"
+                android:scrollY="30dp"
+                android:src="@drawable/login_assests">
+
+            </ImageView>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/profile" />
+        </RelativeLayout>
+
 
 
 
@@ -152,5 +182,9 @@
 
 
     </LinearLayout>
+
+
+
+    </ScrollView>
 
 </RelativeLayout>

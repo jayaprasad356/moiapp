@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.view.animation.AlphaAnimation;
 import android.widget.TextView;
 
+
 import com.greymatter.moi.helper.Session;
 
 public class Splash extends AppCompatActivity {
@@ -40,7 +41,7 @@ public class Splash extends AppCompatActivity {
                     finish();
 
                 }else{
-                    Intent intent=new Intent(Splash.this,MoiReceiveActivity.class);
+                    Intent intent=new Intent(Splash.this,LoginActivity.class);
                     startActivity(intent);
                     finish();
 
